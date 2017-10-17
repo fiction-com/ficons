@@ -11,6 +11,16 @@ End of November
 
 **Specification**
 
+- **Icon Design**
+  - Consider that these will be tied to Fiction's brand and styleguide
+  - Minimal and Simple Icon Style and Theme 
+  - Replace the more commonly used and uglier icons from Font Awesome first, using simpler and lighter designs. 
+    - Icons that are common and bad are for example the user icons, birthday, dashboard, bells, bombs
+- Organization
+  - We will start with a single folder for ALL SVG files for the font from Font Awesome and add the edits with naming conventions
+  - Icons that we edit should be titled "edit-[name].svg"
+  - Icons that we add (new) should be titled "new-[name].svg"
+  - (Applying special names will allow the build to handle them differently)
 - Home Page
   - Marketing: 
     - "Drop-In Replacement for Font Awesome. Use the same class names and get new and improved icons. "
@@ -33,3 +43,5 @@ End of November
   - Font Awesome - Will need to copy the basic CSS for scaling and rotating, etc.. 
   - Github Pages - Will be a direct hosting from the repo
   - CNAME/DNS - https://ficons.fiction.com will be made to forward to the github page
+- Other
+  - LICENSE - License needs to be same as Font Awesome 
