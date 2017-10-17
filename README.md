@@ -25,3 +25,11 @@ End of November
   - Provided CSS + LESS/SCSS
   - Generated CDN link
   - NPM repository (should work sim to FA's)
+- Tools & Packages Needed
+  - Webpack - Build the site
+  - Webpack - Build the download (CSS/Fonts)
+  - NPM - Package to Generate font from SVGs
+  - Webpack/NPM - Write the LESS > CSS for the icons
+  - Font Awesome - Will need to copy the basic CSS for scaling and rotating, etc.. 
+  - Github Pages - Will be a direct hosting from the repo
+  - CNAME/DNS - https://ficons.fiction.com will be made to forward to the github page
