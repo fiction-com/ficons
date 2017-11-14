@@ -36,6 +36,10 @@ fs.readdir(readpath, function(err, items) {
         overwrite: true
       })
 
+      fs.copySync("./README.md", `${readpath}${items[i]}/README.md`, {
+        overwrite: true
+      })
+
       // PACKAGE.JSON
       var rewritePackage = fs.readJsonSync(
         `${readpath}${items[i]}/package.json`
