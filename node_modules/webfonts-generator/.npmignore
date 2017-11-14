@@ -1,0 +1,11 @@
+lib-cov
+coverage
+node_modules
+temp
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~

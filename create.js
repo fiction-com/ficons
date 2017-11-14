@@ -62,7 +62,7 @@ var regularExpression = new RegExp(find, 'g');
 basic = basic.replace(regularExpression, config.version);
 
 
-var icons = fs.readFileSync('./library/css/icons.css')
+var icons = fs.readFileSync('./library/css/iconfont.css')
 
 fs.writeFileSync('./library/ficons-dist/css/ficons.css', basic + icons)
 
