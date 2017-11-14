@@ -26,13 +26,16 @@
         "hexo-renderer-stylus": "^0.3.1",
         "hexo-server": "^0.2.0",
         "hexo-tag-instagram": "^1.0.4",
+        "webfonts-generator": "^0.4.0",
         "yaml-front-matter": "^3.4.0"
     },
     "devDependencies": {
         "algoliasearch-helper": "^2.23.0",
+        "concat-files": "^0.1.1",
         "crypto": "^1.0.1",
         "opn-cli": "^3.1.0",
         "p-each-series": "^1.0.0",
-        "remove-markdown": "^0.2.2"
+        "remove-markdown": "^0.2.2",
+        "webfont": "^7.1.4"
     }
 }

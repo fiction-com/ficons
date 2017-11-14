@@ -36,7 +36,11 @@ homepage:
       desc: The new icons were designed by Kreatank, a world-famous designer
       link: '/customer-support.html'
 
-
+# CUSTOM SCRIPTS/STYLES
+customScripts: 
+  ficons: 
+    type: css
+    url: './ficons.css'
 
 # REPOSITORY
 repo: 

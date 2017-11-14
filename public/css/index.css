@@ -49,6 +49,8 @@ body {
 }
 #hero .right {
   width: 61%;
+  max-width: 570px;
+  margin: 0 auto;
 }
 #hero .hero-logo {
   width: 215px;

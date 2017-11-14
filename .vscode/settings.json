@@ -15,9 +15,9 @@
     "functions/": true,
     "static/": true,
     //  ".babelrc": true,
-    ".prettierignore": true,
+    ".prettierignore": true
 
     // ".eslintrc": true,
-    ".gitignore": true
+    //   ".gitignore": true
   }
 }

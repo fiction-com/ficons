@@ -46,6 +46,22 @@
     <!-- main page styles -->
     <%- css('css/page') %>
 
+    <!-- custom scripts and styles -->
+
+    <% if(config.customScripts){ %>
+        123
+      <% Object.keys(config.customScripts).forEach( function(ind){ %>
+        <% if(config.customScripts[ind].type == 'css'){ %>
+          <link href="<%- config.customScripts[ind].url %>" rel="stylesheet" />
+        <% } %>
+
+        <% if(config.customScripts[ind].type == 'js' ){ %>
+        <script src="<%- config.customScripts[ind].url %>"></script>
+        <% } %>
+
+      <% }) %>
+    <% } %>
+
     <!-- this needs to be loaded before guide's inline scripts -->
     <script src="<%- url_for('/js/vue.min.js') %>"></script>
     <script>window.PAGE_TYPE = "<%- page.type %>"</script>
