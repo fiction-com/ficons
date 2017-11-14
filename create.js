@@ -54,7 +54,7 @@ webfontsGenerator({
 })
 */
 
-var basic = fs.readFileSync('./library/dist/css/basic.css', { encoding: 'UTF-8' })
+var basic = fs.readFileSync('./library/css/basic.css', { encoding: 'UTF-8' })
 
 var find = '{{version}}';
 var regularExpression = new RegExp(find, 'g');
@@ -62,7 +62,7 @@ var regularExpression = new RegExp(find, 'g');
 basic = basic.replace(regularExpression, config.version);
 
 
-var icons = fs.readFileSync('./library/dist/css/icons.css')
+var icons = fs.readFileSync('./library/css/icons.css')
 
 fs.writeFileSync('./library/ficons-dist/css/ficons.css', basic + icons)
 
