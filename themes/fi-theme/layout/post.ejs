@@ -1,0 +1,21 @@
+<%- partial('partials/sb', {context: 'post' }) %>
+
+<div class="content with-sidebar blog post">
+<div class="meta">
+  <% if(page.authorEmail){ %>
+   <div class="metaitem author-img"><img class="avatar" src="<%- gravatar(page.authorEmail, 200) %>" /></div>
+  <% } %>
+  <% if(page.author){ %>
+   <div class="metaitem author-name"><%- page.author %></div>
+  <% } %>
+  <div class="metaitem">&mdash;</div>
+  <div class="metaitem post-date"><%- page.date.format('MMM D[,] YYYY') %></div>
+</div>
+  
+  
+  
+  <h1 class="post-title"><%- page.title %></h1>
+  
+  <%- page.content %>
+  
+</div>

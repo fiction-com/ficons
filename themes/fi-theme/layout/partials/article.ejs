@@ -1,0 +1,43 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> fi-col-sm-6 fi-col-xs-12" itemscope itemprop="blogPost">
+  <div class="article-inner">
+
+    <% if (post.featured_image){ %>
+      <a href="<%- url_for(post.path) %>" class="article-image">
+        <img src="<%= post.featured_image %>" alt="Image: <%- post.title %>">
+      </a>
+    <% } %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+      <% if (!index){ %>
+        <footer class="article-footer">
+          <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+          <% if (post.comments && config.disqus_shortname){ %>
+            <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+          <% } %>
+
+          <%- partial('post/tag') %>
+        </footer>
+      <% } %>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

@@ -1,0 +1,88 @@
+<!-- search -->
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+<%- css('css/search') %>
+<script>
+
+const searchclient = algoliasearch("<%- config.algolia.applicationID %>", "<%- config.algolia.apiKey %>");
+const searchindex = searchclient.initIndex("<%- config.algolia.indexName %>");
+</script>
+<script>
+
+$('body').delegate('.search-query', 'click', function(e){
+  e.stopPropagation();
+  $('.search-results').addClass('show')
+  $('#main').removeClass('show')
+  
+  $('.search-results').find('.search-query').focus()
+  $('body').addClass('show-search')
+
+
+})
+
+function closeSearch(){
+  $('.search-results').removeClass('show')
+  $('#main').addClass('show')
+
+  $('.search-results').find(".the-results").html('')
+  $('body').removeClass('show-search')
+}
+
+$('body').delegate('.close-search, #header, #mobile-bar', 'click', function(){
+  closeSearch()
+})
+
+$(window).on('click', function() {
+  console.log('window click')
+  if($('body').hasClass('show-search')){
+    closeSearch()
+  }
+});
+
+$('body').delegate('.search-results', 'click', function(e){
+    e.stopPropagation();
+});
+
+$('body').delegate('.search-field-search', 'keyup', function(){
+  // with params
+  var searchvalue = $('.search-field-search').val()
+
+  if(searchvalue){
+    $('.loader-wrap').addClass('show')
+  } else {
+    $('.loader-wrap').removeClass('show')
+  }
+
+  searchindex.search(
+    {
+      query: searchvalue,
+      hitsPerPage: 12,
+    },
+    function searchDone(err, content) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      
+      let searchOut = ''
+      console.log(content.hits.length)
+      if( ! content.hits.length ){
+        searchOut += '<div class="no-result">No Results</div>'
+      } else {
+        
+        content.hits.forEach(function(hit){
+          if(hit.title){
+            searchOut += '<a href="'+hit.permalink+'"><div class="title">'+hit._highlightResult.title.value+'</div><div class="exc"></div></a>'
+          }
+        })
+      }
+      
+      
+      $('.search-results').find(".the-results").html(searchOut)
+
+      console.log(content.hits)
+
+    }
+  );
+})
+</script>

@@ -1,0 +1,23 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "search.useIgnoreFilesByDefault": true,
+  "prettier.semi": false,
+  "files.exclude": {
+    // ".deploy_git": true,
+    "public/": true,
+    "node_modules/": true,
+    "dist": true,
+    "icon.png": true,
+    //    "README.md": true,
+    "yarn.lock": true,
+    "package-lock.json": true,
+    "functions/": true,
+    "static/": true,
+    //  ".babelrc": true,
+    ".prettierignore": true,
+
+    // ".eslintrc": true,
+    ".gitignore": true
+  }
+}

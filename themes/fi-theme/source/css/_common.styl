@@ -1,0 +1,247 @@
+@import "_settings"
+@import "_syntax"
+@import "_ad"
+
+
+
+
+
+body
+  font-family: $body-font
+  font-size: $body-font-size
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $medium
+  background-color: white
+  margin: 0
+  &.docs
+    padding-top: $header-height
+
+input, textarea, select, button 
+  font-family: $body-font
+
+.logo-img
+  transition: margin .4s
+  .thelogotext
+    fill: #393939
+  .thelogoicon
+    fill: #ff0076
+  &:hover
+    margin-right: .3em
+    .thelogoicon
+      fill: #0496ff
+
+@media screen and (max-width: 1100px)
+  body.docs
+    padding-top: 0
+
+a
+  text-decoration: none
+  color: $medium
+
+img
+  border: none
+
+h1, h2, h3, h4, strong
+  font-weight: 600
+  color: $dark
+
+code, pre
+  font-family: $code-font
+  font-size: $code-font-size
+  background-color: $codebg
+  -webkit-font-smoothing: initial
+  -moz-osx-font-smoothing: initial
+
+code
+  color: $link2
+  padding: 3px 5px
+  margin: 0 2px
+  border-radius: 2px
+  white-space: nowrap
+
+em
+  color: $light
+
+p
+  word-spacing: 0.05em
+
+a.button
+  padding: 0.75em 2em
+  border-radius: 2em
+  display: inline-block
+  color: #fff
+  background-color: lighten($link1, 8%)
+  transition: all .15s ease
+  box-sizing: border-box
+  border: 1px solid lighten($link1, 8%)
+  transition: all .1s
+  cursor: pointer
+  &.alt
+    background-color: $link2
+    border: 1px solid lighten($link2, 8%)
+  &.white
+    background-color: #fff
+    color: $link1
+  &.white.alt
+    color: $link2
+  &:hover
+    transform: translate(0, -1px)
+    opacity: .8
+
+
+.mark
+  svg 
+    width: 1.5em
+    opacity: .1
+    transition: all .1s
+    cursor: pointer
+    &:hover
+      opacity: 1
+      fill: #ff0076
+
+.highlight
+  overflow-x: auto
+  background-color: $codebg
+  padding: .4em 0 0
+  line-height: 1.1em
+  border-radius: $radius
+  position: relative
+  table, tr, td
+    width: 100%
+    border-collapse: collapse
+    padding: 0
+    margin: 0
+  .gutter
+    width: 1.5em
+  .code
+    $code-line-height = 1.5em
+    pre
+      padding: 1.2em 1.4em
+      line-height: $code-line-height
+      margin: 0
+    .line
+      min-height: $code-line-height
+  &.html, &.js, &.bash, &.css
+    .code:before
+      position: absolute
+      top: 0
+      right: 0
+      color: #ccc
+      text-align: right
+      font-size: .75em
+      padding: 5px 10px 0
+      line-height: 15px
+      height: 15px
+      font-weight: 600
+  &.html .code:before
+    content: "HTML"
+  &.js .code:before
+    content: "JS"
+  &.bash .code:before
+    content: "Shell"
+  &.css .code:before
+    content: "CSS"
+
+
+#main
+  position: relative
+  z-index: 1
+  padding: 0 60px 30px
+  overflow-x: hidden
+  display: none
+  &.show
+    display: block
+
+
+#nav
+  .nav-link
+    cursor: pointer
+  .nav-dropdown-container
+    margin-left: 20px
+    .nav-link
+      transition: .1s color
+      &:hover
+        color: #ff0076
+      &:hover:not(.current)
+        border-bottom: none
+    &:hover
+      .nav-dropdown
+        display: block
+    
+      
+    .arrow
+      pointer-events: none
+  .nav-dropdown
+    display: none
+    box-sizing: border-box
+    max-height: "calc(100vh - %s)" % $header-height
+    overflow-y: auto
+    position: absolute
+    top: 100%
+    right: -15px
+    background-color: #fff
+    padding: 10px 0
+    border: 1px solid #ddd
+    border-bottom-color: #ccc
+    text-align: left
+    border-radius: 4px
+    white-space: nowrap
+    li
+      line-height: 1.8em
+      margin: 0
+      display: block
+      > ul
+        padding-left: 0
+      &:first-child
+        h4
+          margin-top: 0
+          padding-top: 0
+          border-top: 0
+    a, h4
+      padding: 0 24px 0 20px
+    h4
+      // text-transform: uppercase
+      margin: .45em 0 0
+      padding-top: .45em
+      border-top: 1px solid #eee
+    a
+      color: lighten($dark, 10%)
+      font-size: .9em
+      display: block
+      &:hover
+        color: $link1
+  .arrow
+    display: inline-block
+    vertical-align: middle
+    margin-top: -1px
+    margin-left: 6px
+    margin-right: -14px
+    width: 0
+    height: 0
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    border-top: 5px solid #ccc
+
+sup.beta.beta
+  font-size: .6em
+  margin-left: .7em
+  text-transform: uppercase
+  opacity: .6
+
+
+::-webkit-input-placeholder{ /* Firefox 18- */
+  color: rgba(0,0,0,.07)
+  text-transform: uppercase;
+  font-weight: 600
+}
+:-ms-input-placeholder{ /* Firefox 18- */
+  color: rgba(0,0,0,.07)
+  text-transform: uppercase;
+  font-weight: 600
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0,0,0,.07)
+  text-transform: uppercase;
+  font-weight: 600
+}

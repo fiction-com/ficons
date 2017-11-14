@@ -1,0 +1,13 @@
+<div id="header">
+  <div id="header-logo">
+  <a  href="https://www.fiction.com?logo=1">
+    <%- partial('partials/logo') %>
+  </a>
+  <a href="<%- url_for("/") %>">
+    <div class="sub-domain"><%- config.subtitle %><span class="home"> &rarr;</span></div>
+  </a>
+  </div>
+  <ul id="nav">
+    <%- partial('partials/main_menu', { context: 'nav' }) %>
+  </ul>
+</div>

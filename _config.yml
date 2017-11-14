@@ -1,63 +1,75 @@
-# Hexo Configuration
-## Docs: http://zespia.tw/hexo/docs/configuration.html
-## Source: https://github.com/tommy351/hexo/
+## CUSTOM CONFIG 
 
 # Site
-title: Fiction.com
-subtitle: Updates &amp; Essays
-description: "Articles, news and insights"
-author: Fiction.com
-email: hello@fiction.com
-language: english
-footer:  For internal use only
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.fiction.com/
-root: /
-permalink: -/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-
-
-
-# Archives
-## 2: Enable pagination
-## 1: Disable pagination
-## 0: Fully Disable
-archive: 0
-category: 0
-tag: 0
-
-
+title: Ficons
+subtitle: Designer Web Icons
+description: "Drop-In Font Awesome Icons Alternative"
+url: https://ficons.fiction.com/
 
 # SEARCH & SOCIAL 
 metatags: 
-  title: Fiction.com Blog
+  title: Ficons
 google_analytics: 'UA-109072363-1'
 
 # DOCSEARCH (Algolia)
 algolia:
   applicationID: 'A3MLKETIQN'
   apiKey: '1711b46bea41e92888fa6cb50224da2e'
-  indexName: 'blog'
+  adminKey: 'd91c42913ac7b724ea0876609575339b'
+  indexName: 'ficons'
+
+# CONTENT 
+homepage: 
+  headline: Ficons
+  subheadline: A Simple, Open-Source, Drop-In Alternative for Font Awesome Icons
+  bullets: 
+    one: 
+      title: Install in 60 Seconds
+      desc: Replace Font Awesome in less than a minute with the CDN link or NPM.
+      link: '/host/index.html'
+    two: 
+      title: 200 Replaced Icons
+      desc: We've replaced over 200 Font Awesome icons with new ones.
+      link: '/tenant/index.html'
+    three: 
+      title: Designed by Kreatank
+      desc: The new icons were designed by Kreatank, a world-famous designer
+      link: '/customer-support.html'
 
 
-sitemap:
-    path: sitemap.xml
 
 # REPOSITORY
 repo: 
-  url: https://github.com/fictiondotcom/fi-blog
-  src: https://github.com/fictiondotcom/fi-blog/tree/master/src
+  url: https://github.com/fictiondotcom/ficons
+  src: https://github.com/fictiondotcom/ficons/tree/master/src
 
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:fictiondotcom/fi-blog.git
+  repository: git@github.com:fictiondotcom/ficons.git
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+server: 
+  port: 4010
+  logger: true
+
+######
+
+## SHARED CONFIG
+## !! ALL CONFIG BELOW WILL AFFECT ALL STATIC SITES 
+
+# Site Standard
+
+author: Fiction.com
+email: hello@fiction.com
+language: english
+
+sitemap:
+    path: sitemap.xml
 
 
 # Directory
@@ -85,13 +97,6 @@ category_map:
 tag_map:
 
 
-# Server
-## Hexo uses Connect as a server
-## You can customize the logger format as defined in
-## http://www.senchalabs.org/connect/logger.html
-port: 4003
-logger: true
-logger_format:
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -122,15 +127,6 @@ offline:
   stripPrefix: public
   verbose: true
   runtimeCaching:
-    # Ad Sources - should be networkFirst
-    - urlPattern: /*
-      handler: networkFirst
-      options:
-        origin: sendgrid.sp1.convertro.com
-    - urlPattern: /*
-      handler: networkFirst
-      options:
-        origin: ad.doubleclick.net
     # CDNs - should be cacheFirst, since they should be used specific versions so should not change
     - urlPattern: /*
       handler: cacheFirst
@@ -159,5 +155,10 @@ feed:
   path: atom.xml
   limit: 20
 
-alias:
-
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 0
+category: 0
+tag: 0

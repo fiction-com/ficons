@@ -1,0 +1,73 @@
+<% var isIndex = page.path === "index.html" %>
+<div class="sidebar blog">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <%- partial('partials/main_menu', { context: 'sidebar' }) %>
+    </ul>
+    <div class="list">
+     
+      <% if(typeof type != 'undefined' && type.toLowerCase().indexOf('host') !== -1 ){ %>
+        <div class="sb-ad">
+          <h2>
+            Ready To List?
+          </h2>
+          <p>Fiction streamlines the process of finding and renting to quality tenants.</p>
+          
+          <a class="become-backer" href="https://www.fiction.com/hosting">
+            List Your Place
+          </a>
+        </div>
+      <% } 
+      
+      if(typeof type != 'undefined' && type.toLowerCase().indexOf('tenant') !== -1 ) { %>
+       <div class="sb-ad">
+        <h2>
+          Ready to book?
+        </h2>
+        <p>Fiction helps you find and book montly furnished housing without the hassle.</p>
+        
+        <a class="become-backer" href="https://www.fiction.com">
+          Search Rooms
+        </a>
+      
+      </div>
+      <% } %>
+
+      <% if(context === 'post' || context === 'index'){ %>
+        <h2>
+          Recent Posts
+          <a href="<%- url_for('/atom.xml') %>" target="_blank" style="vertical-align: middle; margin-left: 5px;">
+            <img src="<%- url_for('/images/feed.png') %>" style="width: 15px; height: 15px;">
+          </a>
+        </h2>
+        <ul style="padding: 0;">
+        <% site.posts.sort('date', -1).limit(20).each(function (post) { %>
+          <li>
+            <a href="/<%- post.path %>" class="sidebar-link<%- page.title === post.title ? ' current' : '' %>"><%- post.title %></a>
+          </li>
+        <% }) %>
+        </ul>
+      <% } else { %>
+        <h2>
+          <% 
+            var colTitle = type || '&mdash;'
+           
+            site.pages.sort('order').each(function (p){ 
+              if(p.type == type && p.nav){
+                colTitle = p.nav
+                return
+              }
+            }) 
+          %>
+
+          <%- (colTitle.charAt(0).toUpperCase() + colTitle.slice(1)) %>
+
+        </h2>
+        <%- partial('partials/toc', { type: type }) %>
+      <% } %>
+     
+
+     
+    </div>
+  </div>
+</div>

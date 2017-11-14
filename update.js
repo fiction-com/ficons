@@ -1,52 +1,83 @@
-var fs = require('fs')
-var zlib = require('zlib')
-var version = require('../vue/package.json').version
-var themeconfPath = 'themes/vue/_config.yml'
-var installPath = 'src/v2/guide/installation.md'
-var themeconfig = fs.readFileSync(themeconfPath, 'utf-8')
-var installation = fs.readFileSync(installPath, 'utf-8')
+var fs = require("fs-extra")
+var path = require("path")
+var execSync = require("child_process").execSync
+var packageJson = require("./package.json")
+var splitString = "######"
+var readpath = "../"
+var currentDir = process
+  .cwd()
+  .split(path.sep)
+  .pop()
 
-fs.writeFileSync(
-  themeconfPath,
-  themeconfig.replace(/vue_version: .*/, 'vue_version: ' + version)
-)
+fs.readdir(readpath, function(err, items) {
+  for (var i = 0; i < items.length; i++) {
+    var theFile = items[i]
 
-var sizes = {
-  dev: 'vue.js',
-  min: 'vue.min.js',
-  gz: 'vue.min.js',
-  ro_gz: 'vue.runtime.min.js'
-}
-
-var pending = []
-Object.keys(sizes).forEach(file => {
-  var filesize = fs.statSync('../vue/dist/' + sizes[file], 'utf-8').size
-  if (!/gz$/.test(file)) {
-    sizes[file] = (filesize / 1024).toFixed(2)
-  } else {
-    pending.push(new Promise((resolve, reject) => {
-      fs.readFile('../vue/dist/' + sizes[file], (err, buf) => {
-        if (err) return reject(err)
-        zlib.gzip(buf, (err, buf) => {
-          if (err) return reject(err)
-          sizes[file] = (buf.length / 1024).toFixed(2)
-          resolve()
-        })
+    if (
+      currentDir != theFile &&
+      fs.pathExistsSync(`${readpath}${items[i]}/_config.yml`)
+    ) {
+      fs.copySync("./themes", `${readpath}${items[i]}/themes/`, {
+        overwrite: true
       })
-    }))
+      fs.copySync("./scripts", `${readpath}${items[i]}/scripts/`, {
+        overwrite: true
+      })
+
+      fs.copySync("./update.js", `${readpath}${items[i]}/update.js`, {
+        overwrite: true
+      })
+
+      fs.copySync("./makefile", `${readpath}${items[i]}/makefile`, {
+        overwrite: true
+      })
+
+      fs.copySync("./.vscode", `${readpath}${items[i]}/.vscode`, {
+        overwrite: true
+      })
+
+      // PACKAGE.JSON
+      var rewritePackage = fs.readJsonSync(
+        `${readpath}${items[i]}/package.json`
+      )
+
+      rewritePackage.dependencies = Object.assign(
+        {},
+        rewritePackage.dependencies,
+        packageJson.dependencies
+      )
+      rewritePackage.devDependencies = Object.assign(
+        {},
+        rewritePackage.devDependencies,
+        packageJson.devDependencies
+      )
+
+      fs.writeFileSync(
+        `${readpath}${items[i]}/package.json`,
+        JSON.stringify(rewritePackage, null, 4)
+      )
+
+      // CONFIG.YML
+
+      var syncConfig = fs
+        .readFileSync(`./_config.yml`, "UTF-8")
+        .split(splitString)
+
+      var rewriteConfig = fs
+        .readFileSync(`${readpath}${items[i]}/_config.yml`, "UTF-8")
+        .split(splitString)
+
+      if (syncConfig.length == 2 && rewriteConfig.length == 2) {
+        console.log("CONFIG", theFile)
+        fs.writeFileSync(
+          `${readpath}${items[i]}/_config.yml`,
+          `${rewriteConfig[0]}${splitString}${syncConfig[1]}`
+        )
+      } else {
+        console.log("Didnt work config", theFile)
+      }
+
+      console.log(`Updated "${theFile}" Files`)
+    }
   }
-})
-
-Promise.all(pending).then(() => {
-  fs.writeFileSync(
-    installPath,
-    installation
-      .replace(/vue_version: .*/, 'vue_version: ' + version)
-      .replace(/(\w+)_size:.*/g, function (m, p1) {
-        return p1 + '_size: "' + sizes[p1] + '"'
-      })
-  )
-  console.log(sizes)
-}).catch(err => {
-  console.error(err)
 })

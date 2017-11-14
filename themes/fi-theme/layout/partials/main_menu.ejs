@@ -1,0 +1,58 @@
+
+<li>
+  <%- partial('partials/searchfield', { context: context }) %>
+</li>
+
+<% var pageTypes = {} %>
+
+<% 
+site.pages.sort('order').each(function(p){
+//console.log('site.pages', p.title, p.type)
+})
+
+site.pages.sort('order').each(function (p){ 
+
+  if(p.nav){
+    if( ! pageTypes[p.nav] ){
+      pageTypes[p.nav] = {
+        pages: [], 
+        type: p.type, 
+        order: p.order
+      }
+    }
+    pageTypes[p.nav].pages.push(p)
+  }
+  
+}) %>
+
+<% 
+var orderedPageTypes = Object.keys(pageTypes).sort(function(a, b){
+  return pageTypes[a].order - pageTypes[b].order
+})
+
+orderedPageTypes.forEach( function(ind){ %>
+
+<li class="nav-dropdown-container <%- ind %>">
+
+  <a class="nav-link <%- page.type === pageTypes[ind].pages[0].type ? 'current' : '' %>" href="<%- url_for(pageTypes[ind].pages[0].path) %>">
+    <%- ind.charAt(0).toUpperCase() + ind.slice(1) %></a>
+    <% if(pageTypes[ind].pages.length > 1){ %>
+      <span class="arrow"></span>
+      <ul class="nav-dropdown">
+        
+        <li><ul>
+      <% pageTypes[ind].pages.forEach( function(p){ %>
+
+          <li>
+            <a href="<%- url_for(p.path) %>" class="nav-link <%- page.title === p.title ? 'current' : '' %>"><%- p.title %></a>
+          </li>
+
+
+          
+      <% }) %>
+      </ul></li>
+      </ul>
+    <% } %>
+</li>
+<% }) %>
+

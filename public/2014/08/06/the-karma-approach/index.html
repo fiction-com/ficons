@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109072363-1"></script>
+<script>
+
+if (! isDeveloper()) {
+  console.log('ga')
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109072363-1');
+
+}
+
+function isDeveloper(){
+
+  const devSlug = 'fictionDev'
+  if(getQueryVariable(devSlug)){
+    localStorage.setItem(devSlug, getQueryVariable(devSlug))
+  }
+
+  if( localStorage.getItem(devSlug) || document.location.hostname.search("fiction.com") === -1 ){
+    return true
+  } else {
+    return false
+  }
+  
+}
+function getQueryVariable(variable){
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+          var pair = vars[i].split("=");
+          if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+</script>
+
+    <title>The Karma Approach - Ficons</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Let me tell you about something I learned a long time ago that has made a big difference to me:...">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Karma Approach - Ficons">
+    <meta property="og:description" content="Let me tell you about something I learned a long time ago that has made a big difference to me:...">
+    <meta property="og:image" content="https://fiction.com/images/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Karma Approach - Ficons">
+    <meta name="twitter:description" content="Let me tell you about something I learned a long time ago that has made a big difference to me:...">
+    <meta name="twitter:image" content="https://fiction.com/images/logo.png">
+
+ 
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/logo-48.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/logo-120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/logo-144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/logo-152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/logo-192.png">
+
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/logo-48.png">
+    <link rel="icon" type="image/png" sizes="120x120" href="/images/logo-120.png">
+
+    <link rel="icon" href="/images/logo-144.png?v=2" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous">
+    
+    <script src="https://use.typekit.net/jip2itv.js"></script>
+<script>
+  try {
+    Typekit.load({
+      async: true
+    })
+  } catch (e) {} //prettier-ignore
+  ! function (e, t, n, a, c, l, m, o, d, f, h, i) {
+    c[l] && (d = e.createElement(t), d[n] = c[l], e[a]("head")[0].appendChild(d), e.documentElement.className +=
+        " wf-cached"),
+      function s() {
+        for (d = e[a](t), f = "", h = 0; h < d.length; h++) i = d[h][n], i.match(m) && (f += i);
+        f && (c[l] = "/**/" + f), setTimeout(s, o += o)
+      }()
+  }(document, "style", "innerHTML", "getElementsByTagName", localStorage, "tk", /^@font|^\.tk-/, 100)
+</script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="/js/vue.min.js"></script>
+    <script>window.PAGE_TYPE = ""</script>
+
+    
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="main-logo" href="https://www.fiction.com?logo=1">
+        <div class="logo-img">
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.25 122.21">
+
+    <path class="thelogotext" d="M290,80.35c-3.38-4.61-9.47-6.72-14.88-6.72-11.1,0-18.81,10.22-18.81,21.29,0,8.82,5.54,14,13.94,14a29.62,29.62,0,0,0,17.46-6.31l1.9,17.08c-6.5,5.46-17.6,7.84-25.59,7.84-16.91,0-29.1-11.62-29.1-29.29,0-23.52,17.23-42.56,40.34-42.56,6.64,0,15.69,2,20.56,7.28Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M325,57h14.83l-2.94,17.22H322.2c-1.55,9.38-4.31,19.75-4.31,29.29,0,4.06,2,5.31,5.74,5.31a18.41,18.41,0,0,0,6.72-1.25l-1.73,17.78a66.5,66.5,0,0,1-15.81,2.24c-11.06,0-17.64-5-17.64-16.52,0-12.18,3.35-25.06,5.16-36.83L303.09,57h0l1.4-8.68a40.32,40.32,0,0,0,.27-5.6,28.27,28.27,0,0,0-.27-4.31h21.7a19.66,19.66,0,0,1,.4,4.59,38,38,0,0,1-.56,6.31Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M339.12,126a17.24,17.24,0,0,1-.56-4.9,34.78,34.78,0,0,1,.56-6l7.42-48a44.07,44.07,0,0,0,.42-5.74,28.28,28.28,0,0,0-.28-4.31h21.7a19.49,19.49,0,0,1,.43,4.63,39,39,0,0,1-.56,6.29l-7.42,48a37.28,37.28,0,0,0-.42,5.17,23.74,23.74,0,0,0,.42,4.9Zm21.11-76.73c-5.89,0-10.64-3.36-10.64-9.66,0-8.12,6.43-13.86,14.42-13.86,6,0,10.64,3.36,10.64,9.65,0,8-6.41,13.87-14.42,13.87" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M400.71,127.53c-17,0-30.14-10.22-30.14-29.12,0-24.36,17.4-42.7,40.93-42.7,17.14,0,30.15,10.33,30.15,29.29,0,24.31-17.26,42.53-40.94,42.53m8.11-53.91c-10.9,0-17.14,11.2-17.14,21.54,0,7.84,4,13.72,11.83,13.72,10.89,0,17.14-11.2,17.14-21.53,0-7.84-4-13.72-11.8-13.72Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M487.49,126a17.24,17.24,0,0,1-.56-4.9,34.78,34.78,0,0,1,.56-6L491.41,90a38.89,38.89,0,0,0,.7-6.89c0-5.75-2.24-9-8.26-9-9.8,0-13,9.38-14.28,17.64L464.1,126H442.27l9.27-58.63a48.73,48.73,0,0,0,.41-6,29.62,29.62,0,0,0-.28-4.31h21.54a19.43,19.43,0,0,1,.42,4.63,37.14,37.14,0,0,1-.42,5.16h.14c5-6.71,12.46-11.06,21-11.06,13.71,0,20.44,6.58,20.44,20.16a55.25,55.25,0,0,1-.86,9.52L509,115.93a38.9,38.9,0,0,0-.43,5.17A24.47,24.47,0,0,0,509,126Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M197.3,55.86c1.16-6.82,1.9-12.29,10.3-13.5,3.12-.35,4.29-.78,7.23-.44l3.67-17.26c-4.64-1.45-9.76-.68-14-.28-21.24,2-26.92,13.47-29.83,31.47h-11l-2.22,17.86H171.9s-6.24,34.61-6.66,37.11S162.3,127,162.3,127l22.59-.32s-.39.14.78-7.12l8.43-45.85h15.38L203,113c-.43,2.46-1.49,13.47-1.49,13.47l21.63-.15a98.59,98.59,0,0,1,.75-10.42c.44-4.16,5.66-31.48,5.66-31.48.82-5.18,2.09-12.77,3.22-18.82a33.81,33.81,0,0,0,.45-9.76Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogoicon" d="M111,134.37H58.08A12.78,12.78,0,0,1,49,130.6L8.67,90.27a10.61,10.61,0,0,1,7.5-18.12h49.4V22.74A10.58,10.58,0,0,1,72.12,13a10.73,10.73,0,0,1,11.57,2.29L124,55.57a12.83,12.83,0,0,1,3.76,9.1v52.9A16.82,16.82,0,0,1,111,134.37Zm-50.7-18.18h49.33V66.87L83.75,41V90.33H34.43Z" transform="translate(-5.55 -12.15)"/>
+  </svg>
+</div>
+
+
+      </a>
+      <a class="sub-domain-info" href="/">
+        Designer Web Icons
+      </a>
+    </div>
+    <div id="header">
+  <div id="header-logo">
+  <a  href="https://www.fiction.com?logo=1">
+    <div class="logo-img">
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.25 122.21">
+
+    <path class="thelogotext" d="M290,80.35c-3.38-4.61-9.47-6.72-14.88-6.72-11.1,0-18.81,10.22-18.81,21.29,0,8.82,5.54,14,13.94,14a29.62,29.62,0,0,0,17.46-6.31l1.9,17.08c-6.5,5.46-17.6,7.84-25.59,7.84-16.91,0-29.1-11.62-29.1-29.29,0-23.52,17.23-42.56,40.34-42.56,6.64,0,15.69,2,20.56,7.28Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M325,57h14.83l-2.94,17.22H322.2c-1.55,9.38-4.31,19.75-4.31,29.29,0,4.06,2,5.31,5.74,5.31a18.41,18.41,0,0,0,6.72-1.25l-1.73,17.78a66.5,66.5,0,0,1-15.81,2.24c-11.06,0-17.64-5-17.64-16.52,0-12.18,3.35-25.06,5.16-36.83L303.09,57h0l1.4-8.68a40.32,40.32,0,0,0,.27-5.6,28.27,28.27,0,0,0-.27-4.31h21.7a19.66,19.66,0,0,1,.4,4.59,38,38,0,0,1-.56,6.31Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M339.12,126a17.24,17.24,0,0,1-.56-4.9,34.78,34.78,0,0,1,.56-6l7.42-48a44.07,44.07,0,0,0,.42-5.74,28.28,28.28,0,0,0-.28-4.31h21.7a19.49,19.49,0,0,1,.43,4.63,39,39,0,0,1-.56,6.29l-7.42,48a37.28,37.28,0,0,0-.42,5.17,23.74,23.74,0,0,0,.42,4.9Zm21.11-76.73c-5.89,0-10.64-3.36-10.64-9.66,0-8.12,6.43-13.86,14.42-13.86,6,0,10.64,3.36,10.64,9.65,0,8-6.41,13.87-14.42,13.87" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M400.71,127.53c-17,0-30.14-10.22-30.14-29.12,0-24.36,17.4-42.7,40.93-42.7,17.14,0,30.15,10.33,30.15,29.29,0,24.31-17.26,42.53-40.94,42.53m8.11-53.91c-10.9,0-17.14,11.2-17.14,21.54,0,7.84,4,13.72,11.83,13.72,10.89,0,17.14-11.2,17.14-21.53,0-7.84-4-13.72-11.8-13.72Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M487.49,126a17.24,17.24,0,0,1-.56-4.9,34.78,34.78,0,0,1,.56-6L491.41,90a38.89,38.89,0,0,0,.7-6.89c0-5.75-2.24-9-8.26-9-9.8,0-13,9.38-14.28,17.64L464.1,126H442.27l9.27-58.63a48.73,48.73,0,0,0,.41-6,29.62,29.62,0,0,0-.28-4.31h21.54a19.43,19.43,0,0,1,.42,4.63,37.14,37.14,0,0,1-.42,5.16h.14c5-6.71,12.46-11.06,21-11.06,13.71,0,20.44,6.58,20.44,20.16a55.25,55.25,0,0,1-.86,9.52L509,115.93a38.9,38.9,0,0,0-.43,5.17A24.47,24.47,0,0,0,509,126Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogotext" d="M197.3,55.86c1.16-6.82,1.9-12.29,10.3-13.5,3.12-.35,4.29-.78,7.23-.44l3.67-17.26c-4.64-1.45-9.76-.68-14-.28-21.24,2-26.92,13.47-29.83,31.47h-11l-2.22,17.86H171.9s-6.24,34.61-6.66,37.11S162.3,127,162.3,127l22.59-.32s-.39.14.78-7.12l8.43-45.85h15.38L203,113c-.43,2.46-1.49,13.47-1.49,13.47l21.63-.15a98.59,98.59,0,0,1,.75-10.42c.44-4.16,5.66-31.48,5.66-31.48.82-5.18,2.09-12.77,3.22-18.82a33.81,33.81,0,0,0,.45-9.76Z" transform="translate(-5.55 -12.15)"/>
+    <path class="thelogoicon" d="M111,134.37H58.08A12.78,12.78,0,0,1,49,130.6L8.67,90.27a10.61,10.61,0,0,1,7.5-18.12h49.4V22.74A10.58,10.58,0,0,1,72.12,13a10.73,10.73,0,0,1,11.57,2.29L124,55.57a12.83,12.83,0,0,1,3.76,9.1v52.9A16.82,16.82,0,0,1,111,134.37Zm-50.7-18.18h49.33V66.87L83.75,41V90.33H34.43Z" transform="translate(-5.55 -12.15)"/>
+  </svg>
+</div>
+
+
+  </a>
+  <a href="/">
+    <div class="sub-domain">Designer Web Icons<span class="home"> &rarr;</span></div>
+  </a>
+  </div>
+  <ul id="nav">
+    
+<li>
+  
+
+<form id="search-form">
+  <input type="text" id="search-query-nav" class="search-query search-field-nav st-default-search-input" placeholder="Search">
+ 
+</form>
+
+</li>
+
+
+
+
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar show">
+        
+<div class="sidebar blog">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+<li>
+  
+
+<form id="search-form">
+  <input type="text" id="search-query-sidebar" class="search-query search-field-sidebar st-default-search-input" placeholder="Search">
+ 
+</form>
+
+</li>
+
+
+
+
+
+
+
+
+    </ul>
+    <div class="list">
+     
+      
+
+      
+        <h2>
+          Recent Posts
+          <a href="/atom.xml" target="_blank" style="vertical-align: middle; margin-left: 5px;">
+            <img src="/images/feed.png" style="width: 15px; height: 15px;">
+          </a>
+        </h2>
+        <ul style="padding: 0;">
+        
+          <li>
+            <a href="/2016/11/10/wear-black-clothes/" class="sidebar-link">Wear Black Clothes</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/02/the-beginner-mindset/" class="sidebar-link">The Beginner Mindset</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/20/math-and-the-nomad-movement/" class="sidebar-link">Math And The Nomad Movement</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/02/applied-socratic-method/" class="sidebar-link">Applied Socratic Method</a>
+          </li>
+        
+          <li>
+            <a href="/2014/08/06/the-karma-approach/" class="sidebar-link current">The Karma Approach</a>
+          </li>
+        
+          <li>
+            <a href="/2014/08/01/the-picasso-method/" class="sidebar-link">The Picasso Method</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/28/social-media-rules/" class="sidebar-link">Social Media Rules</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/24/the-secret-to-productivity/" class="sidebar-link">The Secret To Productivity</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/23/the-21-laws-of-good-copywriting/" class="sidebar-link">The 21 Laws Of Good Copywriting</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/21/the-davinci-method/" class="sidebar-link">The Davinci Method</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/18/naming-your-company/" class="sidebar-link">Naming Your Company</a>
+          </li>
+        
+        </ul>
+      
+     
+
+     
+    </div>
+  </div>
+</div>
+
+<div class="content with-sidebar blog post">
+<div class="meta">
+  
+   <div class="metaitem author-img"><img class="avatar" src="https://www.gravatar.com/avatar/d9fcdd64d03f117e3fe6fbcbb34ddd09?s=200" /></div>
+  
+  
+   <div class="metaitem author-name">Andrew POwers</div>
+  
+  <div class="metaitem">&mdash;</div>
+  <div class="metaitem post-date">Aug 6, 2014</div>
+</div>
+  
+  
+  
+  <h1 class="post-title">The Karma Approach</h1>
+  
+  <p>Let me tell you about something I learned a long time ago that has made a big difference to me: Karma.<br><a id="more"></a><br>I don’t mean Karma in a religious or ethereal way either. I mean it in a way that makes a real impact on your work and the results you’ll see.</p>
+<p>But first, a quick story…</p>
+<h1 id="Discovering-Karma"><a href="#Discovering-Karma" class="headerlink" title="Discovering Karma"></a>Discovering Karma</h1><blockquote>
+<p>“Again, you can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.” – Steve Jobs</p>
+</blockquote>
+<p>I discovered the concept of karma shortly after I graduated from graduate school. The time was around 2008 and if you remember, there were no jobs around, period. Especially no good jobs.</p>
+<p>Because of this, I decided I would try and make ends meet by helping people build and market websites. Since I didn’t have a real portfolio, people weren’t exactly jumping to pay me lots to do this. Because of this, my first clients literally paid me near minimum wage to build and market their sites.</p>
+<p>These weren’t great clients either. They obeyed the <strong>“inverse of client awesomeness to amount they’re paying you”</strong> law. Which basically means the less a client pays you, the worse and more demanding they usually are (many of you have probably seen this).</p>
+<p>But although these clients were demanding, unappreciative and paying me almost nothing, I worked overtime to do a good job for them:</p>
+<ul>
+<li>I built them amazing websites;</li>
+<li>I never left them hanging;</li>
+<li>I never ignored them;</li>
+<li>I never complained, asked for more money or gave them attitude.</li>
+</ul>
+<p>So why did I do all of this? Karma.</p>
+<p>I knew, or trusted, that if I did a good job for even these crappy clients, somehow I would eventually be taken care of.</p>
+<p>Sure enough, these clients were referring me to new clients. The new clients, stunned at the awesome reviews, were willing to pay me 5 times what I had been getting paid by the original clients.</p>
+<p>Then before long, I had too many of these new clients, and my prices had to go up again. I was now comfortable in my income and everything was headed in the right direction.</p>
+<p><a href="https://www.pagelines.com/" target="_blank" rel="external">PageLines</a> started much the same way. I gave away free web design tools and only started charging when they became too popular to support for free.</p>
+<h1 id="Do-you-have-karma"><a href="#Do-you-have-karma" class="headerlink" title="Do you have karma?"></a>Do you have karma?</h1><p>After reading this, the importance of Karma may seem obvious. In real life it is anything but…</p>
+<p>Here are some hallmarks that someone does NOT get karma:</p>
+<ul>
+<li>They say, “you get what you pay for.” Regarding their work;</li>
+<li>They only work as hard as they are expected to work;</li>
+<li>They give only superficial insights and keep any valuable knowledge to themselves;</li>
+<li>They insist on “getting paid well” before proving themselves.</li>
+</ul>
+<p>The thing about true Karma behavior is that it’s non-obvious. It can actually be counterintuitive.</p>
+<h1 id="How-YOU-should-think-about-Karma"><a href="#How-YOU-should-think-about-Karma" class="headerlink" title="How YOU should think about Karma"></a>How YOU should think about Karma</h1><p>What you need to do is ask yourself the following:</p>
+<ul>
+<li>Do I sincerely want to help others reach their goals?  Do I actually help them?</li>
+<li>Do I do more than is expected for my cost?</li>
+<li>Do I consistently go over and above without being forced?</li>
+<li>Do I work hard to learn what I need to do to actually help?</li>
+</ul>
+<p>Here’s the point: doing these things might not seem to be in your interest in the short term, but karma is about faith.</p>
+<p>I believe in Karma to the point where I’ve made it the #1 value of my company, PageLines. And here’s how we write it:</p>
+<blockquote>
+<p><strong>Karma Comes First</strong><br>When approaching new projects or initiatives; look to find ways of helping people – altruistic intent. If we are successful at helping the world, we will be taken care of. Reciprocation is the most powerful force on Earth.”</p>
+</blockquote>
+<p>Try Karma in your business, my guess is you’ll see results.</p>
+
+  
+</div>
+
+      </div>
+      <div class="search-results hidden">
+  <div class="search-results-container">
+    <div class="search-in">
+      
+
+<form id="search-form">
+  <input type="text" id="search-query-search" class="search-query search-field-search st-default-search-input" placeholder="Search">
+ 
+ <a class="close-search"><i class="fa fa-remove"></i></a>
+ 
+</form>
+
+    </div>
+    <div class="the-results">
+     <div class="loader-wrap">
+<div class="showbox" style="height: auto;">
+  <div class="loader" style="width: 3em;">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="30"/>
+      </svg>
+  </div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+    <script src="/js/encrypt-common.js"></script>
+    <script src="/js/crypto-js.js"></script>
+    <script src="/js/smooth-scroll.min.js"></script>
+
+    
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+
+    <!-- search -->
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+<link rel="stylesheet" href="/css/search.css">
+<script>
+
+const searchclient = algoliasearch("A3MLKETIQN", "1711b46bea41e92888fa6cb50224da2e");
+const searchindex = searchclient.initIndex("ficons");
+</script>
+<script>
+
+$('body').delegate('.search-query', 'click', function(e){
+  e.stopPropagation();
+  $('.search-results').addClass('show')
+  $('#main').removeClass('show')
+  
+  $('.search-results').find('.search-query').focus()
+  $('body').addClass('show-search')
+
+
+})
+
+function closeSearch(){
+  $('.search-results').removeClass('show')
+  $('#main').addClass('show')
+
+  $('.search-results').find(".the-results").html('')
+  $('body').removeClass('show-search')
+}
+
+$('body').delegate('.close-search, #header, #mobile-bar', 'click', function(){
+  closeSearch()
+})
+
+$(window).on('click', function() {
+  console.log('window click')
+  if($('body').hasClass('show-search')){
+    closeSearch()
+  }
+});
+
+$('body').delegate('.search-results', 'click', function(e){
+    e.stopPropagation();
+});
+
+$('body').delegate('.search-field-search', 'keyup', function(){
+  // with params
+  var searchvalue = $('.search-field-search').val()
+
+  if(searchvalue){
+    $('.loader-wrap').addClass('show')
+  } else {
+    $('.loader-wrap').removeClass('show')
+  }
+
+  searchindex.search(
+    {
+      query: searchvalue,
+      hitsPerPage: 12,
+    },
+    function searchDone(err, content) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      
+      let searchOut = ''
+      console.log(content.hits.length)
+      if( ! content.hits.length ){
+        searchOut += '<div class="no-result">No Results</div>'
+      } else {
+        
+        content.hits.forEach(function(hit){
+          if(hit.title){
+            searchOut += '<a href="'+hit.permalink+'"><div class="title">'+hit._highlightResult.title.value+'</div><div class="exc"></div></a>'
+          }
+        })
+      }
+      
+      
+      $('.search-results').find(".the-results").html(searchOut)
+
+      console.log(content.hits)
+
+    }
+  );
+})
+</script>
+
+    <!-- fastclick -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

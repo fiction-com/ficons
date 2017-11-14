@@ -1,16 +1,27 @@
+define GetFromPkg
+$(shell yaml get _config.yml $(1))
+endef
+
+PORT := $(call GetFromPkg,server.port)
+
 all: deploy
 
 search:
-	export HEXO_ALGOLIA_INDEXING_KEY=d91c42913ac7b724ea0876609575339b
-	hexo algolia
+	hexo searchindex
 
 generate: 
 	rm -rf public db.json
 	hexo generate
 
-serve: 
+serve:
 	$(MAKE) generate
 	hexo serve 
+
+serveopen: 
+	$(MAKE) generate
+	opn http://localhost:$(PORT)/
+	hexo serve 
+	
 
 servedebug: 
 	$(MAKE) generate
@@ -24,4 +35,5 @@ deploy:
 	npm install 
 	$(MAKE) generate
 	$(MAKE) search
+	npm --no-git-tag-version version patch
 	hexo deploy

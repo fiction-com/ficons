@@ -15,11 +15,17 @@ hexo.extend.filter.register("after_post_render", function(data) {
   const excerpt = yaml.loadFront(data.raw).excerpt
   const title = yaml.loadFront(data.raw).title
 
-  if (!title && data.slug) {
-    data.title = data.slug
-      .replace("/index", "")
-      .split("-")
-      .join(" ")
+  if (!title) {
+    if (data.slug) {
+      data.title = data.slug.replace("/index", "")
+    } else {
+      data.title = data.path
+        .replace(".html", "")
+        .split("/")
+        .pop()
+    }
+
+    data.title = data.title.split("-").join(" ")
 
     data.title = data.title.toLowerCase().replace(/\b[a-z]/g, function(letter) {
       return letter.toUpperCase()
@@ -29,7 +35,7 @@ hexo.extend.filter.register("after_post_render", function(data) {
   if (excerpt) {
     data.excerpt = excerpt
   } else {
-    const words = 35
+    const words = 20
     const cont = data.excerpt ? data.excerpt : data.content
     data.excerpt = cont
       .replace(/<(?:.|\n)*?>/gm, "")
@@ -51,7 +57,7 @@ hexo.source.addProcessor("posts/:id/:filename", function(file) {
     const publicDir = hexo.config.public_dir
     const id = file.params.id
     const filename = file.params.filename
-    const dest = `${rootDir}/${publicDir}/p/${id}/${filename}`
+    const dest = `${rootDir}/${publicDir}/entry/${id}/${filename}`
 
     if (file.type === "delete") {
       if (fs.exists(dest)) {

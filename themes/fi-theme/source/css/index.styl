@@ -1,0 +1,167 @@
+
+@import "_settings"
+
+
+
+body
+  background-color: #FFF
+
+#logo
+  span
+    font-size: 1.2em
+  img
+    display: none
+
+#mobile-bar
+  &.top
+    background-color: transparent
+    box-shadow: none
+    .logo
+      display: none
+
+
+
+.logo-pin
+  width: 150px;
+  float: right;
+  margin-right: 60px;
+  svg 
+    fill: #ff0076
+   
+
+#hero
+  padding: $space 40px
+  background-color: #fff
+  #search-form
+    width: auto
+    
+  .search-query
+    font-size: 1.3em
+    margin: .3em 0
+  .inner
+    max-width: $width
+    margin: 0 auto
+    display: flex;
+    align-items: center;
+  .left, .right
+    display: inline-block
+    vertical-align: top
+  .left
+    width: 39%
+  .right
+    width: 61%
+    max-width: 570px
+  .hero-logo
+    width: 215px
+    height: 215px
+    float: right
+    margin-right: 60px
+  h1
+    font-weight: 600
+    margin: 0
+    font-size: 3.2em
+  h2
+    font-family: $logo-font
+    font-weight: 600
+    font-size: 2.4em
+    margin: 0 0 10px
+    display: none
+  h3
+    font-weight: 300
+    font-size: 2em
+    margin: .3em 0
+  .button
+    margin: 1em .5em
+    font-size: 1.05em
+    font-weight: 600
+    letter-spacing: .1em
+    min-width: 8em
+    text-align: center
+   p
+    margin: 1em -.5em;
+  .social-buttons
+    list-style-type: none
+    padding: 0
+    li
+      display: inline-block
+      vertical-align: middle
+      margin-right: 15px
+
+#highlights
+  background-color: #fff
+  padding-bottom: 70px
+  .inner
+    max-width: 900px
+    margin: 0 auto
+    text-align: center
+  .point
+    width: 33%
+    display: inline-block
+    vertical-align: top
+    box-sizing: border-box
+    padding: 0 2em
+    h2
+      font-size: 1.5em
+      margin: 0
+      padding: .5em 0
+    p
+      color: $light
+    a 
+      display: inline-block
+      font-size: .9em
+      font-weight: 600;
+      border: 1px solid #0496ff;
+      text-transform: uppercase;
+      color: #0496ff;
+      padding: 5px 1em;
+      border-radius: 1em;
+      &:hover
+        background: #0496ff
+        color: #fff
+
+#footer
+  padding: $space 0
+  text-align: center
+  font-weight: 600
+  color: rgba(0,0,0,.5)
+  a
+    font-weight: 700
+    color: inherit
+
+@media screen and (max-width: $width)
+  body
+    -webkit-text-size-adjust: none
+    font-size: 14px
+  .sidebar
+    display: block
+  #header
+    display: none
+  #mobile-bar
+    display: block
+  #hero
+    padding: $space 20px 30px
+    #search-form
+      justify-content: center
+    .inner 
+      display: block
+    .logo-pin
+      float: none
+      margin: 1em auto
+    .left, .right
+      text-align: center
+      width: 100%
+    h1
+      font-size: 2em
+    h2
+      display: block
+    .button
+      font-size: .9em
+  #highlights
+    .point
+      display: block
+      margin: 0 auto
+      width: 300px
+      padding: 0 40px 30px
+      &:before
+        content: "—"
+        color: $medium
