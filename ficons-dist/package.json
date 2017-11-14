@@ -1,0 +1,16 @@
+{
+  "name": "ficons",
+  "version": "1.0.8",
+  "description": "ficons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ficons",
+  "license": "MIT",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fictiondotcom/ficons"
+  }
+}
