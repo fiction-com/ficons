@@ -68,16 +68,15 @@ fs.readdir(readpath, function(err, items) {
         .split(splitString)
 
       if (syncConfig.length == 2 && rewriteConfig.length == 2) {
-        console.log("CONFIG", theFile)
         fs.writeFileSync(
           `${readpath}${items[i]}/_config.yml`,
           `${rewriteConfig[0]}${splitString}${syncConfig[1]}`
         )
       } else {
-        console.log("Didnt work config", theFile)
+        console.error("Config did not update.", theFile)
       }
 
-      console.log(`Updated "${theFile}" Files`)
+      console.log(`Static Site: Updated "${theFile}" Files`)
     }
   }
 })
