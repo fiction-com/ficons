@@ -49,7 +49,6 @@
     <!-- custom scripts and styles -->
 
     <% if(config.customScripts){ %>
-        123
       <% Object.keys(config.customScripts).forEach( function(ind){ %>
         <% if(config.customScripts[ind].type == 'css'){ %>
           <link href="<%- config.customScripts[ind].url %>" rel="stylesheet" />

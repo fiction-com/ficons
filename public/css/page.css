@@ -1862,6 +1862,8 @@ body {
   #hero .right {
     text-align: center;
     width: 100%;
+    display: block;
+    margin: 0 auto;
   }
   #hero h1 {
     font-size: 2em;
