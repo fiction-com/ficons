@@ -1,5 +1,7 @@
 const fs = require('fs-extra')
 const config = require('./package.json')
+//const webfontsGenerator = require('webfonts-generator')
+
 const webfontsGenerator = require('generator-2')
 
 const concat = require('concat-files')
