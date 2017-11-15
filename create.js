@@ -1,12 +1,12 @@
 const fs = require('fs-extra')
 const config = require('./package.json')
-const webfontsGenerator = require('webfonts-generator')
+//const webfontsGenerator = require('webfonts-generator')
+
+const webfontsGenerator = require('generator-2')
 
 const concat = require('concat-files')
 
 const CombinedStream = require('combined-stream')
-
-const webfont = require('webfont').default
 
 const testFolder = './library/icons'
 
@@ -21,22 +21,6 @@ const filepaths = files.map((filename) => {
 
 console.log('1. Generate Font')
 
-webfont({
-  files: filepaths,
-  dest: './library/ficons-dist/fonts',
-  cssTemplate: './library/templates/css.hbs',
-  templateOptions: {
-    classPrefix: 'fa-',
-    baseSelector: '.fa'
-  }
-}, function (error) {
-  if (error) {
-    console.log('Fail!', error);
-  } else {
-    console.log('Done!');
-  }
-})
-/*
 webfontsGenerator({
   files: filepaths,
   dest: './library/ficons-dist/fonts',
@@ -52,9 +36,9 @@ webfontsGenerator({
     console.log('Done!');
   }
 })
-*/
 
-var basic = fs.readFileSync('./library/dist/css/basic.css', { encoding: 'UTF-8' })
+
+var basic = fs.readFileSync('./library/css/basic.css', { encoding: 'UTF-8' })
 
 var find = '{{version}}';
 var regularExpression = new RegExp(find, 'g');
@@ -62,7 +46,7 @@ var regularExpression = new RegExp(find, 'g');
 basic = basic.replace(regularExpression, config.version);
 
 
-var icons = fs.readFileSync('./library/dist/css/icons.css')
+var icons = fs.readFileSync('./library/css/iconfont.css')
 
 fs.writeFileSync('./library/ficons-dist/css/ficons.css', basic + icons)
 
