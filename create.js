@@ -20,7 +20,7 @@ const filepaths = files.map((filename) => {
 
 
 console.log('1. Generate Font')
-
+/*
 webfont({
   files: filepaths,
   dest: './library/ficons-dist/fonts',
@@ -36,7 +36,7 @@ webfont({
     console.log('Done!');
   }
 })
-
+*/
 webfontsGenerator({
   files: filepaths,
   dest: './library/ficons-dist/fonts',

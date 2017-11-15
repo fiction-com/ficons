@@ -1,16 +1,48 @@
 {
-  "name": "ficons",
-  "version": "1.0.8",
+  "_from": "ficons",
+  "_id": "ficons@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-wYI5M2AkEza+KvJF+w1q2xXQHfxjzgk9AX9SRLSJ6PShboVmMgSKfY9mb5eBJ40hiO2ZRky0eWJoKRgLa2FAbw==",
+  "_location": "/ficons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "ficons",
+    "name": "ficons",
+    "escapedName": "ficons",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ficons/-/ficons-1.0.5.tgz",
+  "_shasum": "48ed12e5dac1664d66850ad81959d14eb6c13d2b",
+  "_spec": "ficons",
+  "_where": "/Users/edgarcheverier/Documents/test-fi",
+  "author": {
+    "name": "Ficons"
+  },
+  "bugs": {
+    "url": "https://github.com/fictiondotcom/ficons/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
   "description": "ficons",
+  "homepage": "https://github.com/fictiondotcom/ficons#readme",
+  "license": "MIT",
   "main": "index.js",
+  "name": "ficons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fictiondotcom/ficons.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ficons",
-  "license": "MIT",
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fictiondotcom/ficons"
-  }
+  "version": "1.0.5"
 }
