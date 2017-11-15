@@ -36,7 +36,7 @@ webfont({
     console.log('Done!');
   }
 })
-/*
+
 webfontsGenerator({
   files: filepaths,
   dest: './library/ficons-dist/fonts',
@@ -52,7 +52,7 @@ webfontsGenerator({
     console.log('Done!');
   }
 })
-*/
+
 
 var basic = fs.readFileSync('./library/css/basic.css', { encoding: 'UTF-8' })
 
