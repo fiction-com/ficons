@@ -1,2 +1,11 @@
 .DS_Store
-node_modules
+node_modules/
+/dist/
+/functions/
+test/e2e/reports/
+coverage
+npm-debug.log
+yarn-error.log
+selenium-debug.log
+.idea
+*.iml
