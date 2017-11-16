@@ -1,9 +1,12 @@
-const fs = require("fs-extra")
-const chalk = require("chalk")
-
 const config = require("../package.json")
 
+const fs = require("fs-extra")
+
+const chalk = require("chalk")
+
 const webfontsGenerator = require("ficons-webfont-generator")
+
+// mapping the icons
 
 const testFolder = "./ficons/icons"
 
@@ -13,8 +16,10 @@ const filepaths = files.map(filename => {
   return `./ficons/icons/${filename}`
 })
 
-console.log("Making Font...")
 
+// creating the fonts
+
+console.log("Making Font...")
 webfontsGenerator(
   {
     fontName: "Ficons",
@@ -27,7 +32,7 @@ webfontsGenerator(
     },
     descent: "256"
   },
-  function(error) {
+  function (error) {
     if (error) {
       console.log("Fail!", error)
     } else {
@@ -38,10 +43,15 @@ webfontsGenerator(
         encoding: "UTF-8"
       })
 
+
+      // handling the versions
+
       var find = "{{version}}"
       var regularExpression = new RegExp(find, "g")
-
       basic = basic.replace(regularExpression, config.version)
+
+
+      // reading and concatenate the basic.css & basic.css into ficons.css
 
       var icons = fs.readFileSync("./ficons/css/iconfont.css")
 
