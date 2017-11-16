@@ -7,7 +7,7 @@
     // ".deploy_git": true,
     "public/": true,
     "node_modules/": true,
-    "dist": true,
+    // "dist": true,
     "icon.png": true,
     //    "README.md": true,
     "yarn.lock": true,
