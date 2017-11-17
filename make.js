@@ -29,8 +29,8 @@ ficonsWebfontsGenerator(
     html: true,
     htmlDest: "./test/preview.html",
     htmlTemplate: "./tpl/html.hbs",
-    // json: true,
-    // jsonDest: "./dist/font.json",
+    json: true,
+    jsonDest: "./dist/font.json",
     templateOptions: {
       classPrefix: "fa-",
       baseSelector: ".fa"
