@@ -1,11 +1,12 @@
 @font-face {
   font-family: "Ficons";
-  src: url("../fonts/Ficons.eot?v=1.0.8");
-  src: url("../fonts/Ficons.eot?#iefix&v=1.0.8") format("embedded-opentype"),
-    url("../fonts/Ficons.woff2?v=1.0.8") format("woff2"),
-    url("../fonts/Ficons.woff?v=1.0.8") format("woff"),
-    url("../fonts/Ficons.ttf?v=1.0.8") format("truetype"),
-    url("../fonts/Ficons.svg?v=1.0.8#svgFicons") format("svg");
+  src: url("./fonts/Ficons.eot?v={{version}}");
+  src: url("./fonts/Ficons.eot?#iefix&v={{version}}")
+      format("embedded-opentype"),
+    url("./fonts/Ficons.woff2?v={{version}}") format("woff2"),
+    url("./fonts/Ficons.woff?v={{version}}") format("woff"),
+    url("./fonts/Ficons.ttf?v={{version}}") format("truetype"),
+    url("./fonts/Ficons.svg?v={{version}}#svgFicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }

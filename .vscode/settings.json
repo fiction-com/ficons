@@ -3,6 +3,10 @@
   "editor.formatOnSave": true,
   "search.useIgnoreFilesByDefault": true,
   "prettier.semi": false,
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+
   "files.exclude": {
     // ".deploy_git": true,
     "public/": true,

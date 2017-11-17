@@ -1,63 +1,65 @@
-const config = require("../package.json")
+const config = require("./package.json")
 
 const fs = require("fs-extra")
 
 const chalk = require("chalk")
 
-const webfontsGenerator = require("ficons-webfont-generator")
+const ficonsWebfontsGenerator = require("ficons-webfont-generator")
 
 // mapping the icons
 
-const testFolder = "./ficons/icons"
+const originalIcons = "./original"
 
-const files = fs.readdirSync(testFolder)
+const files = fs.readdirSync(originalIcons)
 
 const filepaths = files.map(filename => {
-  return `./ficons/icons/${filename}`
+  return `./original/${filename}`
 })
-
 
 // creating the fonts
 
 console.log("Making Font...")
-webfontsGenerator(
+ficonsWebfontsGenerator(
   {
     fontName: "Ficons",
     files: filepaths,
     dest: "./dist/fonts",
-    cssTemplate: "./ficons/templates/css.hbs",
+    cssDest: "./dist/basic.ficons.css",
+    cssTemplate: "./tpl/css.hbs",
+    html: true,
+    htmlDest: "./test/preview.html",
+    htmlTemplate: "./tpl/html.hbs",
+    // json: true,
+    // jsonDest: "./dist/font.json",
     templateOptions: {
       classPrefix: "fa-",
       baseSelector: ".fa"
     },
     descent: "256"
   },
-  function (error) {
+  function(error) {
     if (error) {
       console.log("Fail!", error)
     } else {
       console.log(chalk.hex("#0496FF").bold("Done Making Font!"))
 
       console.log("Writing Files...")
-      var basic = fs.readFileSync("./ficons/css/basic.css", {
+      var basic = fs.readFileSync("./dist/basic.css", {
         encoding: "UTF-8"
       })
 
-
-      // handling the versions
-
+      // Add Cache Busting TO Font Files
       var find = "{{version}}"
       var regularExpression = new RegExp(find, "g")
       basic = basic.replace(regularExpression, config.version)
 
-
       // reading and concatenate the basic.css & basic.css into ficons.css
 
-      var icons = fs.readFileSync("./ficons/css/iconfont.css")
+      var icons = fs.readFileSync("./dist/basic.ficons.css")
 
-      fs.ensureFileSync("./dist/css/ficons.css")
+      fs.ensureFileSync("./dist/ficons.css")
 
-      fs.writeFileSync("./dist/css/ficons.css", `${basic} \n\n ${icons}`)
+      fs.writeFileSync("./dist/ficons.css", `${basic} \n\n ${icons}`)
 
       console.log(chalk.hex("#0496FF").bold("Done Writing Files!"))
     }
