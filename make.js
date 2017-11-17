@@ -27,7 +27,7 @@ ficonsWebfontsGenerator(
     cssDest: "./dist/basic.ficons.css",
     cssTemplate: "./tpl/css.hbs",
     html: true,
-    htmlDest: "./test/preview.html",
+    htmlDest: "./preview.html",
     htmlTemplate: "./tpl/html.hbs",
     json: true,
     jsonDest: "./dist/font.json",
