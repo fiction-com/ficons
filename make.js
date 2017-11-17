@@ -1,6 +1,7 @@
 const config = require("./package.json")
 
 const fs = require("fs-extra")
+const cleanCSS = require("clean-css")
 
 const chalk = require("chalk")
 
@@ -57,9 +58,12 @@ ficonsWebfontsGenerator(
 
       var icons = fs.readFileSync("./dist/basic.ficons.css")
 
+      var rawCSS = `${basic} \n\n ${icons}`
       fs.ensureFileSync("./dist/ficons.css")
+      fs.writeFileSync("./dist/ficons.css", rawCSS)
 
-      fs.writeFileSync("./dist/ficons.css", `${basic} \n\n ${icons}`)
+      fs.ensureFileSync("./dist/ficons.min.css")
+      fs.writeFileSync("./dist/ficons.min.css", new CleanCSS().minify(rawCSS))
 
       console.log(chalk.hex("#0496FF").bold("Done Writing Files!"))
     }
