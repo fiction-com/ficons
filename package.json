@@ -1,5 +1,5 @@
 {
-  "name": "Ficons",
+  "name": "ficons",
   "version": "1.0.18",
   "scripts": {
     "make": "node make.js"
