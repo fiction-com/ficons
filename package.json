@@ -18,7 +18,7 @@
     "chalk": "^2.3.0",
     "concat-files": "^0.1.1",
     "crypto": "^1.0.1",
-    "ficons-webfont-generator": "^1.4.0",
+    "ficons-webfont-generator": "^1.4.1",
     "opn-cli": "^3.1.0",
     "p-each-series": "^1.0.0"
   }

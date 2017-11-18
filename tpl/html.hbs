@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>{{fontName}}</title>
-  <link rel="stylesheet" href="../dist/basic.css">
+  <link rel="stylesheet" href="./dist/basic.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<style>
 		body {
@@ -27,6 +27,7 @@
 <body>
 	<h1>{{fontName}}</h1>
 	{{#each names}}
+
 	<div class="preview">
 		<span class="preview__icon">
 			<span class="{{removePeriods ../baseSelector}} {{../classPrefix}}{{this}}"></span>

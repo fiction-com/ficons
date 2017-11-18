@@ -1,7 +1,7 @@
 const config = require("./package.json")
 
 const fs = require("fs-extra")
-const cleanCSS = require("clean-css")
+const CleanCSS = require("clean-css")
 
 const chalk = require("chalk")
 
@@ -10,11 +10,23 @@ const ficonsWebfontsGenerator = require("ficons-webfont-generator")
 // mapping the icons
 
 const originalIcons = "./original"
+const ficons = "./src"
 
-const files = fs.readdirSync(originalIcons)
+const originalFiles = fs.readdirSync(originalIcons)
+const ficonFiles = fs.readdirSync(ficons)
 
-const filepaths = files.map(filename => {
-  return `./original/${filename}`
+const filepaths = originalFiles.map(filename => {
+  if (ficonFiles.includes(filename)) {
+    return `${ficons}/${filename}`
+  } else {
+    return `${originalIcons}/${filename}`
+  }
+})
+
+ficonFiles.forEach(filename => {
+  if (!originalFiles.includes(filename)) {
+    filepaths.push(`${ficons}/${filename}`)
+  }
 })
 
 // creating the fonts

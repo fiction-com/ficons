@@ -311,9 +311,9 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
-ficons-webfont-generator@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/ficons-webfont-generator/-/ficons-webfont-generator-1.4.0.tgz#431b7091250e3ab8868b267b8f06d80d1d27eb88"
+ficons-webfont-generator@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ficons-webfont-generator/-/ficons-webfont-generator-1.4.1.tgz#399e1fc4f4124bb5ad05e6d5a9c5d4b5bbceaecf"
   dependencies:
     handlebars "^4.0.5"
     mkdirp "^0.5.0"
