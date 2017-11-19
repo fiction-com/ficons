@@ -1,13 +1,14 @@
 {
   "name": "ficons",
+  "author": "Fiction",
   "version": "1.0.18",
+  "private": false,
+  "keywords": ["Font Awesome", "Webfont"],
+  "homepage": "https://ficons.fiction.com",
   "scripts": {
     "make": "node make.js"
   },
-  "private": false,
-  "hexo": {
-    "version": "3.4.0"
-  },
+
   "dependencies": {
     "clean-css": "^4.1.9",
     "crypto-js": "3.1.*",
