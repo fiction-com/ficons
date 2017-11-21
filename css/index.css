@@ -1,0 +1,201 @@
+body {
+  background-color: #fff;
+}
+#logo span {
+  font-size: 1.2em;
+}
+#logo img {
+  display: none;
+}
+#mobile-bar.top {
+  background-color: transparent;
+  box-shadow: none;
+}
+#mobile-bar.top .logo {
+  display: none;
+}
+.logo-pin {
+  width: 150px;
+  float: right;
+  margin-right: 60px;
+}
+.logo-pin svg {
+  fill: #ff0076;
+}
+#hero {
+  padding: 50px 40px;
+  background-color: #fff;
+}
+#hero #search-form {
+  width: auto;
+}
+#hero .search-query {
+  font-size: 1.3em;
+  margin: 0.3em 0;
+}
+#hero .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+#hero .left,
+#hero .right {
+  display: inline-block;
+  vertical-align: top;
+}
+#hero .left {
+  width: 39%;
+}
+#hero .right {
+  width: 61%;
+  max-width: 530px;
+  margin: 0 auto;
+}
+#hero .hero-logo {
+  width: 215px;
+  height: 215px;
+  float: right;
+  margin-right: 60px;
+}
+#hero h1 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 3.2em;
+}
+#hero h2 {
+  font-family: "canada-type-gibson", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.4em;
+  margin: 0 0 10px;
+  display: none;
+}
+#hero h3 {
+  font-weight: 300;
+  font-size: 2em;
+  margin: 0.3em 0;
+}
+#hero .button {
+  margin: 1em 0.5em;
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  min-width: 8em;
+  text-align: center;
+}
+#hero p {
+  margin: 1em -0.5em;
+}
+#hero .social-buttons {
+  list-style-type: none;
+  padding: 0;
+}
+#hero .social-buttons li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+#highlights {
+  background-color: #fff;
+  padding-bottom: 70px;
+}
+#highlights .inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+#highlights .point {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0 2em;
+}
+#highlights .point h2 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0.5em 0;
+}
+#highlights .point p {
+  color: #7f8c8d;
+}
+#highlights .point a {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: 1px solid #0496ff;
+  text-transform: uppercase;
+  color: #0496ff;
+  padding: 5px 1em;
+  border-radius: 1em;
+}
+#highlights .point a:hover {
+  background: #0496ff;
+  color: #fff;
+}
+#footer {
+  padding: 50px 0;
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.9;
+}
+#footer .text {
+  opacity: 0.5;
+}
+#footer a {
+  color: inherit;
+}
+@media screen and (max-width: 1100px) {
+  body {
+    -webkit-text-size-adjust: none;
+    font-size: 14px;
+  }
+  .sidebar {
+    display: block;
+  }
+  #header {
+    display: none;
+  }
+  #mobile-bar {
+    display: block;
+  }
+  #hero {
+    padding: 50px 20px 30px;
+  }
+  #hero #search-form {
+    justify-content: center;
+  }
+  #hero .inner {
+    display: block;
+  }
+  #hero .logo-pin {
+    float: none;
+    margin: 1em auto;
+  }
+  #hero .left,
+  #hero .right {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  #hero h1 {
+    font-size: 2em;
+  }
+  #hero h2 {
+    display: block;
+  }
+  #hero .button {
+    font-size: 0.9em;
+  }
+  #highlights .point {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 40px 30px;
+  }
+  #highlights .point:before {
+    content: "—";
+    color: #34495e;
+  }
+}
