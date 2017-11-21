@@ -128,10 +128,21 @@ body {
   color: #0496ff;
   padding: 5px 1em;
   border-radius: 1em;
+  background: transparent;
+  transition: 0.2s all;
+}
+#highlights .point a .fa {
+  width: 0;
+  transition: 0.5s all;
+  opacity: 0;
 }
 #highlights .point a:hover {
   background: #0496ff;
   color: #fff;
+}
+#highlights .point a:hover .fa {
+  width: 8px;
+  opacity: 1;
 }
 #footer {
   padding: 50px 0;
