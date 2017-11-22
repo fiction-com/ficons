@@ -3,9 +3,6 @@
   "author": "Fiction",
   "version": "1.0.21",
   "private": false,
-  "bugs": {
-    "url": "https://github.com/fictiondotcom/ficons-webfont-generator"
-  },
   "keywords": [
     "Font Awesome",
     "Webfont"
@@ -13,6 +10,10 @@
   "homepage": "https://ficons.fiction.com",
   "scripts": {
     "make": "node make.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fictiondotcom/ficons.git"
   },
   "dependencies": {
     "clean-css": "^4.1.9",
