@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ficons.fiction.com/examples.html</loc>
+    
+    <lastmod>2017-11-22T22:48:17.294Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ficons.fiction.com/ficons-reference.html</loc>
     
     <lastmod>2017-11-22T22:17:10.658Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://ficons.fiction.com/license.html</loc>
     
     <lastmod>2017-11-22T21:45:33.929Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ficons.fiction.com/examples.html</loc>
-    
-    <lastmod>2017-11-22T21:43:27.080Z</lastmod>
     
   </url>
   
