@@ -3,6 +3,9 @@
   "author": "Fiction",
   "version": "1.0.19",
   "private": false,
+  "bugs": {
+    "url": "https://github.com/fictiondotcom/ficons"
+  },
   "keywords": [
     "Font Awesome",
     "Webfont"
