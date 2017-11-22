@@ -4,7 +4,7 @@
 Ficons is a Simple, Open-Source, Drop-In Alternative for Font Awesome Icons.
 Icons are designed by Kreatank and maintained by [The Fiction Team](https://www.fiction.com/).
 
-Get started at [http://fontawesome.io](http://fontawesome.io)!
+Get started at [https://ficons.fiction.com](https://ficons.fiction.com)!
 
 ## License
 - The Ficons font is licensed under the SIL OFL 1.1:
