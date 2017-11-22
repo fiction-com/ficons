@@ -2125,12 +2125,15 @@ body {
   background-color: #ff0076;
 }
 .content p.success {
-  border-left-color: #ff0076;
+  border-left-color: #0496ff;
+}
+.content p.success a {
+  color: #0496ff;
 }
 .content p.success:before {
   content: "\f00c";
   font-family: FontAwesome;
-  background-color: #ff0076;
+  background-color: #0496ff;
 }
 .guide-links {
   margin-top: 2em;

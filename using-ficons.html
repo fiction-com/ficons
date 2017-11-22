@@ -43,20 +43,23 @@ function getQueryVariable(variable){
 
     <title>Using Ficons - Ficons</title>
     <meta charset="utf-8">
-    <meta name="description" content="Filler...">
+    <meta name="description" content="After you install Ficons, you can place Ficons just about anywhere with the  tag.
+Drop-In Replacement for Font AwesomeFicons is...">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Using Ficons - Ficons">
-    <meta property="og:description" content="Filler...">
+    <meta property="og:description" content="After you install Ficons, you can place Ficons just about anywhere with the  tag.
+Drop-In Replacement for Font AwesomeFicons is...">
     <meta property="og:image" content="https://fiction.com/images/logo.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Using Ficons - Ficons">
-    <meta name="twitter:description" content="Filler...">
+    <meta name="twitter:description" content="After you install Ficons, you can place Ficons just about anywhere with the  tag.
+Drop-In Replacement for Font AwesomeFicons is...">
     <meta name="twitter:image" content="https://fiction.com/images/logo.png">
 
- 
+
     <link rel="apple-touch-icon" sizes="76x76" href="/images/logo-48.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/images/logo-120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/images/logo-144.png">
@@ -78,7 +81,7 @@ function getQueryVariable(variable){
 
     <!-- Always get latest FIcons version (for Fiction sites) -->
     <link href="https://cdn.jsdelivr.net/npm/ficons/dist/ficons.css" rel="stylesheet" type="text/css">
-    
+
     <script src="https://use.typekit.net/jip2itv.js"></script>
 <script>
   try {
@@ -116,8 +119,8 @@ function getQueryVariable(variable){
     <script src="/js/vue.min.js"></script>
     <script>window.PAGE_TYPE = "docs"</script>
 
-    
-    
+
+
   </head>
   <body class="docs">
     <div id="mobile-bar" >
@@ -226,7 +229,7 @@ function getQueryVariable(variable){
   </ul>
 </div>
 
-    
+
       <div id="main" class="fix-sidebar show">
         
 
@@ -349,7 +352,46 @@ function getQueryVariable(variable){
   
     <h1 class="page-title">Using Ficons</h1>
   
-  <h2 id="Filler"><a href="#Filler" class="headerlink" title="Filler"></a>Filler</h2>
+  <p>After you <a href="./getting-started.html">install Ficons</a>, you can place Ficons just about anywhere with the <i> tag.</i></p>
+<h2 id="Drop-In-Replacement-for-Font-Awesome"><a href="#Drop-In-Replacement-for-Font-Awesome" class="headerlink" title="Drop-In Replacement for Font Awesome"></a>Drop-In Replacement for Font Awesome</h2><p class="tip">Ficons is built as a drop-in replacement for <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>, which means you can replace it with Ficons and everything should work the same, although Ficons has several improvements.</p>
+
+<h2 id="Basic-Icons"><a href="#Basic-Icons" class="headerlink" title="Basic Icons"></a>Basic Icons</h2><p>You can place Ficons just about anywhere using the CSS Prefix fa and the icon’s name. Ficons is designed to be used with inline elements. We use the <code>&lt;i&gt;</code> tag for brevity, but using a <code>&lt;span&gt;</code> is more semantically correct</p>
+<p><i class="fa fa-magic"></i> fa-magic<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-magic</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>If you change the font-size of the icon’s container, the icon gets bigger. Same things goes for color, drop shadow, and anything else that gets inherited using CSS. </p>
+</blockquote>
+<h2 id="Larger-Icons"><a href="#Larger-Icons" class="headerlink" title="Larger Icons"></a>Larger Icons</h2><p>To increase icon sizes relative to their container, use the <code>fa-lg</code> (33% increase), <code>fa-2x</code>, <code>fa-3x</code>, <code>fa-4x</code>,or <code>fa-5x</code> classes. </p>
+<p><i class="fa fa-magic fa-lg"></i> fa-lg<br><i class="fa fa-magic fa-2x"></i> fa-2x<br><i class="fa fa-magic fa-3x"></i> fa-3x<br><i class="fa fa-magic fa-4x"></i> fa-4x<br><i class="fa fa-magic fa-5x"></i> fa-5x<br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-lg"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-lg</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-2x"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-2x</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-3x"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-3x</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-4x"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-4x</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-5x"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-5x</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p> If your icons are getting chopped off on top and bottom, make sure you have sufficient line-height. </p>
+</blockquote>
+<h2 id="Fixed-Width-Icons"><a href="#Fixed-Width-Icons" class="headerlink" title="Fixed Width Icons"></a>Fixed Width Icons</h2><p>Use <code>fa-fw</code> to set icons at a fixed width. Great to use when different icon widths throw off alignment. Especially useful in things like nav lists &amp; list groups. </p>
+<p><i class="fa fa-home fa-fw"></i>&nbsp; Home<br><i class="fa fa-heart fa-fw"></i>&nbsp; Heart<br><i class="fa fa-magic fa-fw"></i>&nbsp; Magic</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-home fa-fw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>&amp;nbsp; Home</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-heart fa-fw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>&amp;nbsp; Heart</div><div class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-magic fa-fw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>&amp;nbsp; Magic</div></pre></td></tr></table></figure>
+<h2 id="List-Icons"><a href="#List-Icons" class="headerlink" title="List Icons"></a>List Icons</h2><p>Use <code>fa-ul</code> and <code>fa-li</code> to easily replace default bullets in unordered lists.</p>
+<ul class="fa-ul"><br>  <li><i class="fa-li fa fa-check-square"></i>List icons</li><br>  <li><i class="fa-li fa fa-check-square"></i>can be used</li><br>  <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li><br>  <li><i class="fa-li fa fa-square"></i>in lists</li><br></ul>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"fa-ul"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa-li fa fa-check-square"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>List icons<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa-li fa fa-check-square"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>can be used<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa-li fa fa-spinner fa-spin"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>as bullets<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa-li fa fa-square"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>in lists<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Bordered-amp-Pulled-Icons"><a href="#Bordered-amp-Pulled-Icons" class="headerlink" title="Bordered &amp; Pulled Icons"></a>Bordered &amp; Pulled Icons</h2><p>Use <code>fa-border</code> and <code>fa-pull-right</code> or <code>fa-pull-left</code> for easy pull quotes or article icons. </p>
+<p><i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i> Tomorrow we will run faster, stretch out our arms farther…<br>And then one fine morning&mdash; So we beat on, boats against the<br>current, borne back ceaselessly into the past.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;i class=&quot;fa fa-quote-left fa-3x fa-pull-left fa-border&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;</div><div class="line">Be curious to hear with patience the opinions of others. Consider and weigh well whether those who find fault have ground or not for blame, and if so, amend. But if not, make as though you have not heard, or if they should be someone you esteem, show them by arguments the cause of their mistake.</div></pre></td></tr></table></figure>
+<h2 id="Animated-Icons"><a href="#Animated-Icons" class="headerlink" title="Animated Icons"></a>Animated Icons</h2><p>Use the <code>fa-spin</code> class to get any icon to rotate, and use <code>fa-pulse</code> to have it rotate with 8 steps. Works well with <code>fa-spinner</code>, <code>fa-refresh</code>, and <code>fa-cog</code>. </p>
+<p><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><br><span class="sr-only">Loading…</span></p>
+<p><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><br><span class="sr-only">Loading…</span></p>
+<p><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><br><span class="sr-only">Loading…</span></p>
+<p><i class="fa fa-cog fa-spin fa-3x fa-fw"></i><br><span class="sr-only">Loading…</span></p>
+<p><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br><span class="sr-only">Loading…</span></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;i class=&quot;fa fa-spinner fa-spin fa-3x fa-fw&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;</div><div class="line"></div><div class="line">&lt;i class=&quot;fa fa-circle-o-notch fa-spin fa-3x fa-fw&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;</div><div class="line"></div><div class="line">&lt;i class=&quot;fa fa-refresh fa-spin fa-3x fa-fw&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;</div><div class="line"></div><div class="line">&lt;i class=&quot;fa fa-cog fa-spin fa-3x fa-fw&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;</div><div class="line"></div><div class="line">&lt;i class=&quot;fa fa-spinner fa-pulse fa-3x fa-fw&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Some browsers on some platforms have issues with animated icons resulting in a jittery wobbling effect.</p>
+<p>CSS3 animations aren’t supported in IE8 - IE9. </p>
+</blockquote>
+<h2 id="Rotated-amp-Flipped"><a href="#Rotated-amp-Flipped" class="headerlink" title="Rotated &amp; Flipped"></a>Rotated &amp; Flipped</h2><p>To arbitrarily rotate and flip icons, use the <code>fa-rotate-*</code> and <code>fa-flip-*</code> classes. </p>
+<p><i class="fa fa-shield"></i> normal<br><br><i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br><br><i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br><br><i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br><br><i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br><br><i class="fa fa-shield fa-flip-vertical"></i> fa-flip-vertical</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;i class=&quot;fa fa-shield&quot;&gt;&lt;/i&gt; normal&lt;br&gt;</div><div class="line">&lt;i class=&quot;fa fa-shield fa-rotate-90&quot;&gt;&lt;/i&gt; fa-rotate-90&lt;br&gt;</div><div class="line">&lt;i class=&quot;fa fa-shield fa-rotate-180&quot;&gt;&lt;/i&gt; fa-rotate-180&lt;br&gt;</div><div class="line">&lt;i class=&quot;fa fa-shield fa-rotate-270&quot;&gt;&lt;/i&gt; fa-rotate-270&lt;br&gt;</div><div class="line">&lt;i class=&quot;fa fa-shield fa-flip-horizontal&quot;&gt;&lt;/i&gt; fa-flip-horizontal&lt;br&gt;</div><div class="line">&lt;i class=&quot;fa fa-shield fa-flip-vertical&quot;&gt;&lt;/i&gt; fa-flip-vertical</div></pre></td></tr></table></figure>
+<h2 id="Custom-CSS"><a href="#Custom-CSS" class="headerlink" title="Custom CSS"></a>Custom CSS</h2><p>Anything you can do with CSS font styles, you can do with Ficons.</p>
+<p><i class="fa fa-home fa-2x" style="color: #FFF;background:#ff0076; padding: 10px;border-radius: 3px; transform: skewX(10deg);"></i><br><i class="fa fa-magic fa-2x" style="color: #0496ff; margin-top: 40px; padding: 10px;border-radius: 50%; box-shadow: 0 0 20px rgba(0, 0, 0, .2);"></i></p>
+
   
   <div class="footer">
     <a href="https://github.com/fictiondotcom/ficons/tree/master/srcusing-ficons.md" target="_blank">
@@ -394,7 +436,7 @@ function getQueryVariable(variable){
     <script src="/js/crypto-js.js"></script>
     <script src="/js/smooth-scroll.min.js"></script>
 
-    
+
     <!-- main custom script for sidebars, version selects etc. -->
     <script src="/js/css.escape.js"></script>
     <script src="/js/common.js"></script>
