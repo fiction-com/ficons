@@ -1686,6 +1686,27 @@ body.show-search #header .search-query {
 .the-results a .exc {
   opacity: 0.6;
 }
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-grid .icon-grid-item {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.icon-grid .icon-grid-item .fa {
+  margin-right: 0.5em;
+}
+.icon-grid .icon-grid-item .name {
+  opacity: 0.7;
+  font-size: 12px;
+}
+.icon-grid .icon-grid-item:hover {
+  color: #ff0076;
+  cursor: pointer;
+}
 body {
   background-color: #fff;
 }
