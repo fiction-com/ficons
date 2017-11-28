@@ -39,7 +39,13 @@ const filepaths = originalFiles.map(filename => {
     iconsListing.replaced.push(name)
     return `${iconsFolder}/${filename}`
   } else {
-    iconsListing.original.push(name)
+    if (
+      !iconsListing.brands.includes(name) &&
+      !iconsListing.assistive.includes(name)
+    ) {
+      iconsListing.original.push(name)
+    }
+
     return `${originalIcons}/${filename}`
   }
 })

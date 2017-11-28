@@ -1,5 +1,5 @@
 module.exports = [
   "asl-interpreting",
-  "famerican-sign-language-interpreting",
+  "american-sign-language-interpreting",
   "assistive-listening-systems"
 ]

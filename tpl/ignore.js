@@ -32,5 +32,13 @@ module.exports = [
   "glide-g",
   "ravelry",
   "leanpub",
-  "grav"
+  "grav",
+  "eercast",
+  "forumbee",
+  "linode",
+  "modx",
+  "optin-monster",
+  "ravelry",
+  "sellsy",
+  "rebel"
 ]
