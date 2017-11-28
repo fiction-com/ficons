@@ -1,8 +1,7 @@
 @font-face {
   font-family: "{{fontName}}";
   src: url("./{{fontName}}.eot?v={{version}}");
-  src: url("./{{fontName}}.eot?#iefix&v={{version}}")
-      format("embedded-opentype"),
+  src: url("./{{fontName}}.eot?#iefix&v={{version}}") format("embedded-opentype"),
     url("./{{fontName}}.woff2?v={{version}}") format("woff2"),
     url("./{{fontName}}.woff?v={{version}}") format("woff"),
     url("./{{fontName}}.ttf?v={{version}}") format("truetype"),

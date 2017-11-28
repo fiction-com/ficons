@@ -1,6 +1,8 @@
-module.exports = {
-  cssFile: "node_modules/ficons/dist/ficons.min.css",
-  cssFileRaw: "node_modules/ficons/dist/ficons.css",
-  jsonFile: "node_modules/ficons/dist/font.json",
-  json: require("./dist/font.json")
+module.exports = function(fontName = "ficons") {
+  return {
+    cssFile: `node_modules/ficons/dist/${fontName}/font.min.css`,
+    cssFileRaw: `node_modules/ficons/dist/${fontName}/font.css`,
+    jsonFile: `node_modules/ficons/dist/${fontName}/font.config.json`,
+    json: require(`./dist/${fontName}/font.config.json`)
+  }
 }

@@ -9,7 +9,7 @@ const ficonsWebfontsGenerator = require("ficons-webfont-generator")
 
 // mapping the icons
 const fontName = "ficons"
-
+const standardName = "iconfont"
 const originalIcons = "./original"
 const srcFolder = "./src"
 const distFolder = "./dist"
@@ -43,7 +43,7 @@ ficonFiles.forEach(filename => {
 console.log("Making Font...")
 ficonsWebfontsGenerator(
   {
-    fontName: fontName,
+    fontName: standardName,
     files: filepaths,
     dest: outputFolder,
     cssDest: generatedIconsCSSFile,
@@ -78,7 +78,7 @@ ficonsWebfontsGenerator(
       // ADD FONT NAME
       find = "{{fontName}}"
       regularExpression = new RegExp(find, "g")
-      basic = basic.replace(regularExpression, fontName)
+      basic = basic.replace(regularExpression, standardName)
 
       // reading and concatenate the basic.css & basic.css into ficons.css
 
@@ -91,9 +91,9 @@ ficonsWebfontsGenerator(
       fs.ensureFileSync(`${outputFolder}/partial.basic.css`)
       fs.writeFileSync(`${outputFolder}/partial.basic.css`, basic)
 
-      fs.ensureFileSync(`${outputFolder}/ficons.min.css`)
+      fs.ensureFileSync(`${outputFolder}/font.min.css`)
       fs.writeFileSync(
-        `${outputFolder}/ficons.min.css`,
+        `${outputFolder}/font.min.css`,
         new CleanCSS().minify(rawCSS)
       )
 
