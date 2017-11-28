@@ -1,5 +1,6 @@
 ## Complex
 
+* [x] example completed item
 * [ ] address-book, address-book-o
 * [ ] address-card, address-card-o
 * [ ] archive
