@@ -88,6 +88,13 @@ ficonsWebfontsGenerator(
       var jsonConfig = fs.readJsonSync(jsonFile)
       jsonConfig.listing = iconsListing
 
+      // prettier-ignore
+      jsonConfig.cdn = `https://cdn.jsdelivr.net/npm/ficons@${config.version}/dist/${fontName}/font.css`
+      // prettier-ignore
+      jsonConfig.cdnDev = `https://cdn.jsdelivr.net/npm/ficons/dist/${fontName}/font.css`
+
+      jsonConfig.cssFile = `/dist/${fontName}/font.css`
+
       fs.writeJsonSync(jsonFile, jsonConfig)
 
       // ADD VERSION NUMBER - Add Cache Busting TO Font Files
