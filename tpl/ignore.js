@@ -30,5 +30,7 @@ module.exports = [
   "dashcube",
   "glide",
   "glide-g",
-  "ravelry"
+  "ravelry",
+  "leanpub",
+  "grav"
 ]
