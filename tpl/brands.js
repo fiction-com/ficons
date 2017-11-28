@@ -1,4 +1,9 @@
 module.exports = [
+  "apple",
+  "behance",
+  "behance-square",
+  "bitbucket",
+  "bitbucket-square",
   "wordpress",
   "stumbleupon",
   "stumbleupon-circle",
@@ -8,6 +13,8 @@ module.exports = [
   "facebook",
   "facebook-square",
   "facebook-official",
+  "flickr",
+  "get-pocket",
   "pagelines",
   "fiction",
   "github",
@@ -33,6 +40,7 @@ module.exports = [
   "reddit-alien",
   "snapchat",
   "snapchat-ghost",
+  "snapchat-square",
   "slack",
   "pinterest",
   "pinterest-p",
@@ -43,5 +51,7 @@ module.exports = [
   "slideshare",
   "quora",
   "whatsapp",
-  "usb"
+  "usb",
+  "jsfiddle",
+  "linux"
 ]

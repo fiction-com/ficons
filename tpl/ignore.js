@@ -1,6 +1,7 @@
 module.exports = [
   "500px",
   "adn",
+  "black-tie",
   "bandcamp",
   "gratipay",
   "yoast",
@@ -19,6 +20,7 @@ module.exports = [
   "ioxhost",
   "grav",
   "ge",
+  "qq",
   "gg",
   "gg-cirle",
   "font-awesome",
@@ -40,5 +42,12 @@ module.exports = [
   "optin-monster",
   "ravelry",
   "sellsy",
-  "rebel"
+  "rebel",
+  "first-order",
+  "gittip",
+  "ils",
+  "lastfm",
+  "lastfm-square",
+  "odnoklassniki",
+  "odnoklassniki-square"
 ]
