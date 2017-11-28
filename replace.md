@@ -1,3 +1,9 @@
+Problems to resolve:
+
+* more consistent sizing
+* more consistent design style
+* several important icons are ugly
+
 ## Complex
 
 * [ ] address-book, address-book-o
@@ -81,6 +87,10 @@
 * [ ] ticket
 * [ ] **user (all)**
 * [ ] wrench
+* [ ] volume-control-phone
+* [ ] warning
+* [ ] upload
+* [ ] unlock / lock
 
 ## Simple
 
