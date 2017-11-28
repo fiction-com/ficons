@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "Ficons";
-  src: url("./fonts/Ficons.eot?v={{version}}");
-  src: url("./fonts/Ficons.eot?#iefix&v={{version}}")
+  font-family: "{{fontName}}";
+  src: url("./{{fontName}}.eot?v={{version}}");
+  src: url("./{{fontName}}.eot?#iefix&v={{version}}")
       format("embedded-opentype"),
-    url("./fonts/Ficons.woff2?v={{version}}") format("woff2"),
-    url("./fonts/Ficons.woff?v={{version}}") format("woff"),
-    url("./fonts/Ficons.ttf?v={{version}}") format("truetype"),
-    url("./fonts/Ficons.svg?v={{version}}#svgFicons") format("svg");
+    url("./{{fontName}}.woff2?v={{version}}") format("woff2"),
+    url("./{{fontName}}.woff?v={{version}}") format("woff"),
+    url("./{{fontName}}.ttf?v={{version}}") format("truetype"),
+    url("./{{fontName}}.svg?v={{version}}#svg{{fontName}}") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 .fa {
   display: inline-block;
-  font: normal normal normal 14px/1 Ficons;
+  font: normal normal normal 14px/1 {{fontName}};
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

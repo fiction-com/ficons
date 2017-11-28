@@ -8,16 +8,25 @@ const chalk = require("chalk")
 const ficonsWebfontsGenerator = require("ficons-webfont-generator")
 
 // mapping the icons
+const fontName = "ficons"
 
 const originalIcons = "./original"
-const ficons = "./src"
+const srcFolder = "./src"
+const distFolder = "./dist"
+
+const basicCSSFile = `./tpl/basic.css`
+
+const outputFolder = `${distFolder}/${fontName}`
+const iconsFolder = `${srcFolder}/${fontName}`
+
+const generatedIconsCSSFile = `${outputFolder}/partial.icons.css`
 
 const originalFiles = fs.readdirSync(originalIcons)
-const ficonFiles = fs.readdirSync(ficons)
+const ficonFiles = fs.readdirSync(iconsFolder)
 
 const filepaths = originalFiles.map(filename => {
   if (ficonFiles.includes(filename)) {
-    return `${ficons}/${filename}`
+    return `${iconsFolder}/${filename}`
   } else {
     return `${originalIcons}/${filename}`
   }
@@ -25,7 +34,7 @@ const filepaths = originalFiles.map(filename => {
 
 ficonFiles.forEach(filename => {
   if (!originalFiles.includes(filename)) {
-    filepaths.push(`${ficons}/${filename}`)
+    filepaths.unshift(`${iconsFolder}/${filename}`)
   }
 })
 
@@ -34,16 +43,16 @@ ficonFiles.forEach(filename => {
 console.log("Making Font...")
 ficonsWebfontsGenerator(
   {
-    fontName: "Ficons",
+    fontName: fontName,
     files: filepaths,
-    dest: "./dist/fonts",
-    cssDest: "./dist/basic.ficons.css",
+    dest: outputFolder,
+    cssDest: generatedIconsCSSFile,
     cssTemplate: "./tpl/css.hbs",
     html: true,
-    htmlDest: "./preview.html",
+    htmlDest: `${outputFolder}/preview.html`,
     htmlTemplate: "./tpl/html.hbs",
     json: true,
-    jsonDest: "./dist/font.json",
+    jsonDest: `${outputFolder}/font.config.json`,
     templateOptions: {
       classPrefix: "fa-",
       baseSelector: ".fa"
@@ -57,25 +66,36 @@ ficonsWebfontsGenerator(
       console.log(chalk.hex("#0496FF").bold("Done Making Font!"))
 
       console.log("Writing Files...")
-      var basic = fs.readFileSync("./css/basic.css", {
+      var basic = fs.readFileSync(basicCSSFile, {
         encoding: "UTF-8"
       })
 
-      // Add Cache Busting TO Font Files
-      var find = "{{version}}"
-      var regularExpression = new RegExp(find, "g")
+      // ADD VERSION NUMBER - Add Cache Busting TO Font Files
+      let find = "{{version}}"
+      let regularExpression = new RegExp(find, "g")
       basic = basic.replace(regularExpression, config.version)
+
+      // ADD FONT NAME
+      find = "{{fontName}}"
+      regularExpression = new RegExp(find, "g")
+      basic = basic.replace(regularExpression, fontName)
 
       // reading and concatenate the basic.css & basic.css into ficons.css
 
-      var icons = fs.readFileSync("./dist/basic.ficons.css")
+      var icons = fs.readFileSync(generatedIconsCSSFile)
 
       var rawCSS = `${basic} \n\n ${icons}`
-      fs.ensureFileSync("./dist/ficons.css")
-      fs.writeFileSync("./dist/ficons.css", rawCSS)
+      fs.ensureFileSync(`${outputFolder}/font.css`)
+      fs.writeFileSync(`${outputFolder}/font.css`, rawCSS)
 
-      fs.ensureFileSync("./dist/ficons.min.css")
-      fs.writeFileSync("./dist/ficons.min.css", new CleanCSS().minify(rawCSS))
+      fs.ensureFileSync(`${outputFolder}/partial.basic.css`)
+      fs.writeFileSync(`${outputFolder}/partial.basic.css`, basic)
+
+      fs.ensureFileSync(`${outputFolder}/ficons.min.css`)
+      fs.writeFileSync(
+        `${outputFolder}/ficons.min.css`,
+        new CleanCSS().minify(rawCSS)
+      )
 
       console.log(chalk.hex("#0496FF").bold("Done Writing Files!"))
     }
