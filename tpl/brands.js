@@ -53,5 +53,10 @@ module.exports = [
   "whatsapp",
   "usb",
   "jsfiddle",
-  "linux"
+  "linux",
+  "y-combinator",
+  "y-combinator-square",
+  "windows",
+  "joomla",
+  "drupal"
 ]

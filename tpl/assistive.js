@@ -5,5 +5,9 @@ module.exports = [
   "ambulance",
   "audio-description",
   "blind",
-  "braille"
+  "braille",
+  "universal-access",
+  "stethoscope",
+  "sign-language",
+  "medkit"
 ]
