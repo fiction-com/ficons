@@ -57,7 +57,7 @@ ficonsWebfontsGenerator(
       console.log(chalk.hex("#0496FF").bold("Done Making Font!"))
 
       console.log("Writing Files...")
-      var basic = fs.readFileSync("./dist/basic.css", {
+      var basic = fs.readFileSync("./css/basic.css", {
         encoding: "UTF-8"
       })
 
