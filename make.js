@@ -13,27 +13,39 @@ const standardName = "iconfont"
 const originalIcons = "./original"
 const srcFolder = "./src"
 const distFolder = "./dist"
-
-const basicCSSFile = `./tpl/basic.css`
-
 const outputFolder = `${distFolder}/${fontName}`
 const iconsFolder = `${srcFolder}/${fontName}`
+
+const basicCSSFile = `./tpl/basic.css`
+const jsonFile = `${outputFolder}/font.config.json`
 
 const generatedIconsCSSFile = `${outputFolder}/partial.icons.css`
 
 const originalFiles = fs.readdirSync(originalIcons)
 const ficonFiles = fs.readdirSync(iconsFolder)
 
+const iconsListing = {
+  new: [],
+  replaced: [],
+  original: [],
+  ignore: require("./tpl/ignore.js")
+}
+
 const filepaths = originalFiles.map(filename => {
+  let name = filename.replace(".svg", "")
   if (ficonFiles.includes(filename)) {
+    iconsListing.replaced.push(name)
     return `${iconsFolder}/${filename}`
   } else {
+    iconsListing.original.push(name)
     return `${originalIcons}/${filename}`
   }
 })
 
 ficonFiles.forEach(filename => {
+  let name = filename.replace(".svg", "")
   if (!originalFiles.includes(filename)) {
+    iconsListing.new.push(filename.replace(".svg", ""))
     filepaths.unshift(`${iconsFolder}/${filename}`)
   }
 })
@@ -52,7 +64,7 @@ ficonsWebfontsGenerator(
     htmlDest: `${outputFolder}/preview.html`,
     htmlTemplate: "./tpl/html.hbs",
     json: true,
-    jsonDest: `${outputFolder}/font.config.json`,
+    jsonDest: jsonFile,
     templateOptions: {
       classPrefix: "fa-",
       baseSelector: ".fa"
@@ -69,6 +81,12 @@ ficonsWebfontsGenerator(
       var basic = fs.readFileSync(basicCSSFile, {
         encoding: "UTF-8"
       })
+
+      // ADD CONFIG TO JSON
+      var jsonConfig = fs.readJsonSync(jsonFile)
+      jsonConfig.listing = iconsListing
+
+      fs.writeJsonSync(jsonFile, jsonConfig)
 
       // ADD VERSION NUMBER - Add Cache Busting TO Font Files
       let find = "{{version}}"
