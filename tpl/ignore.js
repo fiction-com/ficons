@@ -50,5 +50,7 @@ module.exports = [
   "lastfm-square",
   "odnoklassniki",
   "odnoklassniki-square",
-  "superpowers"
+  "superpowers",
+  "maxcdn",
+  "meanpath"
 ]

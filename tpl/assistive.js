@@ -10,7 +10,7 @@ module.exports = [
   "stethoscope",
   "sign-language",
   "medkit",
-  "hospital",
+  "hospital-o",
   "hard-of-hearing",
   "heartbeat"
 ]

@@ -30,6 +30,7 @@ const iconsListing = {
   original: [],
   brands: require("./tpl/brands.js").sort(),
   assistive: require("./tpl/assistive.js").sort(),
+  currency: require("./tpl/currency.js").sort(),
   ignore: require("./tpl/ignore.js")
 }
 
@@ -41,7 +42,8 @@ const filepaths = originalFiles.map(filename => {
   } else {
     if (
       !iconsListing.brands.includes(name) &&
-      !iconsListing.assistive.includes(name)
+      !iconsListing.assistive.includes(name) &&
+      !iconsListing.currency.includes(name)
     ) {
       iconsListing.original.push(name)
     }

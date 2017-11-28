@@ -77,5 +77,9 @@ module.exports = [
   "stack-overflow",
   "vimeo",
   "wikipedia-w",
-  "yelp"
+  "yelp",
+  "xing",
+  "yahoo",
+  "weixin",
+  "paypal"
 ]
