@@ -1,13 +1,15 @@
 {
   "name": "ficons",
   "author": "Fiction",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "private": false,
-  "keywords": ["Font Awesome", "Webfont"],
+  "keywords": [
+    "Font Awesome",
+    "Webfont"
+  ],
   "homepage": "https://ficons.fiction.com",
   "scripts": {
-    "ultra":
-      "git add -A && git commit -m 'via run script' && git push && npm version patch && npm run make && npm publish",
+    "ultra": "git add -A && git commit -m 'via run script' && git push && npm version patch && npm run make && npm publish",
     "make": "node make.js"
   },
   "repository": {
