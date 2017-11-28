@@ -63,5 +63,19 @@ module.exports = [
   "houzz",
   "google-plus-circle",
   "google-plus-official",
-  "google-plus-square"
+  "google-plus-square",
+  "viadeo",
+  "viadeo-square",
+  "vk",
+  "wechat",
+  "yc",
+  "yc-square",
+  "weibo",
+  "trello",
+  "steam",
+  "steam-square",
+  "stack-overflow",
+  "vimeo",
+  "wikipedia-w",
+  "yelp"
 ]

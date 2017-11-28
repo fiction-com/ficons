@@ -28,8 +28,8 @@ const iconsListing = {
   new: [],
   replaced: [],
   original: [],
-  brands: require("./tpl/brands.js"),
-  assistive: require("./tpl/assistive.js"),
+  brands: require("./tpl/brands.js").sort(),
+  assistive: require("./tpl/assistive.js").sort(),
   ignore: require("./tpl/ignore.js")
 }
 

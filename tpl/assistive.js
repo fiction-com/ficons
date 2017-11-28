@@ -11,5 +11,6 @@ module.exports = [
   "sign-language",
   "medkit",
   "hospital",
-  "hard-of-hearing"
+  "hard-of-hearing",
+  "heartbeat"
 ]

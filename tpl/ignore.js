@@ -49,5 +49,6 @@ module.exports = [
   "lastfm",
   "lastfm-square",
   "odnoklassniki",
-  "odnoklassniki-square"
+  "odnoklassniki-square",
+  "superpowers"
 ]
