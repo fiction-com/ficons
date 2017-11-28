@@ -81,5 +81,13 @@ module.exports = [
   "xing",
   "yahoo",
   "weixin",
-  "paypal"
+  "paypal",
+  "deviantart",
+  "delicious",
+  "foursquare",
+  "github-alt",
+  "github-square",
+  "git",
+  "tripadvisor",
+  "product-hunt"
 ]

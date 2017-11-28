@@ -52,5 +52,6 @@ module.exports = [
   "odnoklassniki-square",
   "superpowers",
   "maxcdn",
-  "meanpath"
+  "meanpath",
+  "free-code-camp"
 ]
