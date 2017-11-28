@@ -9,5 +9,7 @@ module.exports = [
   "universal-access",
   "stethoscope",
   "sign-language",
-  "medkit"
+  "medkit",
+  "hospital",
+  "hard-of-hearing"
 ]

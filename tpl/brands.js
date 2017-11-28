@@ -58,5 +58,10 @@ module.exports = [
   "y-combinator-square",
   "windows",
   "joomla",
-  "drupal"
+  "drupal",
+  "imdb",
+  "houzz",
+  "google-plus-circle",
+  "google-plus-official",
+  "google-plus-square"
 ]
