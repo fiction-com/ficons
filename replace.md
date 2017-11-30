@@ -3,6 +3,7 @@ Problems to resolve:
 * more consistent sizing
 * more consistent design style
 * several important icons are ugly
+* order of icons with directions: down, left, right, up
 
 ## Complex
 
@@ -95,10 +96,10 @@ Problems to resolve:
 
 ## Simple
 
-* [x] arrow-up
-* [x] arrow-right
-* [x] arrow-left
 * [x] arrow-down
+* [x] arrow-left
+* [x] arrow-right
+* [x] arrow-up
 * [x] arrows
 * [x] arrows-alt
 * [ ] arrows-h
@@ -111,3 +112,10 @@ Problems to resolve:
 * [ ] clock-o
 * [ ] close / remove (make lighter)
 * [ ] ellipsis (all / lighten and space out)
+
+## Simple
+
+* [ ] ribbon-arrow-down
+* [ ] ribbon-arrow-left
+* [ ] ribbon-arrow-right
+* [ ] ribbon-arrow-up
