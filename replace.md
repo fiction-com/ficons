@@ -10,8 +10,6 @@ Problems to resolve:
 * [ ] address-book, address-book-o
 * [ ] address-card, address-card-o
 * [ ] archive
-* [x] arrow-up
-* [x] arrow-right
 * [ ] automobile
 * [ ] bank
 * [ ] bath / bathtub
@@ -97,6 +95,10 @@ Problems to resolve:
 
 ## Simple
 
+* [x] arrow-up
+* [x] arrow-right
+* [x] arrow-left
+* [x] arrow-down
 * [x] arrows
 * [x] arrows-alt
 * [ ] arrows-h
