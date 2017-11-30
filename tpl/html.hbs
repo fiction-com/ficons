@@ -12,6 +12,10 @@
 			padding: 10px 20px;
 		}
 
+		.preview-container{
+			column-count: 4;
+		}
+
 		.preview {
 			line-height: 2em;
 		}
@@ -30,15 +34,17 @@
 	<hr/>
 	<a href="#inline">View Inline Preview</a>
 	<hr/>
-	{{#each names}}
+	<div class="preview-container">
+		{{#each names}}
 
-	<div class="preview">
-		<span class="preview__icon">
-			<span class="{{removePeriods ../baseSelector}} {{../classPrefix}}{{this}}"></span>
-		</span>
-		<span>{{this}}</span>
+		<div class="preview">
+			<span class="preview__icon">
+				<span class="{{removePeriods ../baseSelector}} {{../classPrefix}}{{this}}"></span>
+			</span>
+			<span>{{this}}</span>
+		</div>
+		{{/each}}
 	</div>
-	{{/each}}
 	<hr/>
 
 	<h1 id="inline">{{fontName}} - Inline</h1>
