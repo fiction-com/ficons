@@ -96,5 +96,8 @@ module.exports = [
   "safari",
   "chrome",
   "opera",
-  "firefox"
+  "firefox",
+  "vimeo-square",
+  "vine",
+  "resistance"
 ]
