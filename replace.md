@@ -97,10 +97,11 @@ Problems to resolve:
 
 ## Simple
 
-* [ ] arrows
+* [x] arrows
+* [x] arrows-alt
 * [ ] arrows-h
 * [ ] arrows-v
-* [ ] asterisk (make lighter)
+* [x] asterisk (make lighter)
 * [ ] bars (better proportion)
 * [ ] caret-square (all / make lighter)
 * [ ] check, check-circle, check-square (make lighter)
