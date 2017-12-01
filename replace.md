@@ -105,7 +105,7 @@ Problems to resolve:
 * [ ] arrows-h
 * [ ] arrows-v
 * [x] asterisk (make lighter)
-* [ ] bars (better proportion)
+* [x] bars (better proportion)
 * [ ] caret-square (all / make lighter)
 * [ ] check, check-circle, check-square (make lighter)
 * [ ] circle-o-notch
@@ -119,3 +119,5 @@ Problems to resolve:
 * [x] ribbon-arrow-left
 * [x] ribbon-arrow-right
 * [x] ribbon-arrow-up
+* [x] bars-right
+* [x] bars-left
