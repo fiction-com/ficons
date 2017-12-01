@@ -34,7 +34,10 @@ Problems to resolve:
 * [ ] **comment (all / improve shape)**
 * [ ] cube
 * [ ] cutlery
-* [x] chevron
+* [x] chevron-down
+* [x] chevron-left
+* [x] chevron-right
+* [x] chevron-up
 * [ ] database
 * [ ] edit
 * [ ] envelope (all)
@@ -109,7 +112,11 @@ Problems to resolve:
 * [x] asterisk (make lighter)
 * [x] bars (better proportion)
 * [x] caret-square (all / make lighter)
-* [x] check, check-circle, check-square (make lighter)
+* [x] check (make lighter)
+* [x] check-circle
+* [x] check-circle-o
+* [x] check-square
+* [x] check-square-o
 * [x] circle-o-notch
 * [ ] clock-o
 * [x] close / remove (make lighter)
