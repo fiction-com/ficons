@@ -113,9 +113,9 @@ Problems to resolve:
 * [ ] close / remove (make lighter)
 * [ ] ellipsis (all / lighten and space out)
 
-## Simple
+## New
 
-* [ ] ribbon-arrow-down
-* [ ] ribbon-arrow-left
-* [ ] ribbon-arrow-right
-* [ ] ribbon-arrow-up
+* [x] ribbon-arrow-down
+* [x] ribbon-arrow-left
+* [x] ribbon-arrow-right
+* [x] ribbon-arrow-up
