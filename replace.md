@@ -113,7 +113,7 @@ Problems to resolve:
 * [x] circle-o-notch
 * [ ] clock-o
 * [x] close / remove (make lighter)
-* [ ] ellipsis (all / lighten and space out)
+* [x] ellipsis (all / lighten and space out)
 
 ## New
 
