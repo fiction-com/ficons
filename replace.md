@@ -102,8 +102,8 @@ Problems to resolve:
 * [x] arrow-up
 * [x] arrows
 * [x] arrows-alt
-* [ ] arrows-h
-* [ ] arrows-v
+* [x] arrows-h
+* [x] arrows-v
 * [x] asterisk (make lighter)
 * [x] bars (better proportion)
 * [ ] caret-square (all / make lighter)
@@ -119,5 +119,9 @@ Problems to resolve:
 * [x] ribbon-arrow-left
 * [x] ribbon-arrow-right
 * [x] ribbon-arrow-up
+* [x] location-arrow-down
+* [x] location-arrow-left
+* [x] location-arrow-right
+* [x] location-arrow-up
 * [x] bars-right
 * [x] bars-left
