@@ -28,6 +28,7 @@ Problems to resolve:
 * [ ] bus / cab
 * [ ] camera-retro
 * [ ] car
+* [x] circle
 * [ ] coffee
 * [ ] cog / cogs
 * [ ] **comment (all / improve shape)**
