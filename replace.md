@@ -109,7 +109,7 @@ Problems to resolve:
 * [x] asterisk (make lighter)
 * [x] bars (better proportion)
 * [x] caret-square (all / make lighter)
-* [ ] check, check-circle, check-square (make lighter)
+* [x] check, check-circle, check-square (make lighter)
 * [x] circle-o-notch
 * [ ] clock-o
 * [x] close / remove (make lighter)
