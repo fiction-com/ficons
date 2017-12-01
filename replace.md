@@ -124,5 +124,13 @@ Problems to resolve:
 * [x] location-arrow-left
 * [x] location-arrow-right
 * [x] location-arrow-up
+* [x] swirl-arrow-down
+* [x] swirl-arrow-left
+* [x] swirl-arrow-right
+* [x] swirl-arrow-up
+* [x] swirl-arrow-alt-down
+* [x] swirl-arrow-alt-left
+* [x] swirl-arrow-alt-right
+* [x] swirl-arrow-alt-up
 * [x] bars-right
 * [x] bars-left
