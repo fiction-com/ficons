@@ -109,7 +109,7 @@ Problems to resolve:
 * [x] bars (better proportion)
 * [x] caret-square (all / make lighter)
 * [ ] check, check-circle, check-square (make lighter)
-* [ ] circle-o-notch
+* [x] circle-o-notch
 * [ ] clock-o
 * [x] close / remove (make lighter)
 * [ ] ellipsis (all / lighten and space out)
