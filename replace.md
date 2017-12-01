@@ -33,6 +33,7 @@ Problems to resolve:
 * [ ] **comment (all / improve shape)**
 * [ ] cube
 * [ ] cutlery
+* [x] chevron
 * [ ] database
 * [ ] edit
 * [ ] envelope (all)
