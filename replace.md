@@ -19,7 +19,7 @@ Problems to resolve:
 * [ ] biniculars
 * [ ] birthday-cake
 * [ ] bolt
-* [ ] bomb
+* [x] bomb
 * [ ] book
 * [ ] briefcase
 * [ ] bug
