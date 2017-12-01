@@ -111,7 +111,7 @@ Problems to resolve:
 * [ ] check, check-circle, check-square (make lighter)
 * [ ] circle-o-notch
 * [ ] clock-o
-* [ ] close / remove (make lighter)
+* [x] close / remove (make lighter)
 * [ ] ellipsis (all / lighten and space out)
 
 ## New
