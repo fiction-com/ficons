@@ -107,7 +107,7 @@ Problems to resolve:
 * [x] arrows-v
 * [x] asterisk (make lighter)
 * [x] bars (better proportion)
-* [ ] caret-square (all / make lighter)
+* [x] caret-square (all / make lighter)
 * [ ] check, check-circle, check-square (make lighter)
 * [ ] circle-o-notch
 * [ ] clock-o
