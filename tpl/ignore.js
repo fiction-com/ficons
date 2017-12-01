@@ -53,5 +53,6 @@ module.exports = [
   "superpowers",
   "maxcdn",
   "meanpath",
-  "free-code-camp"
+  "free-code-camp",
+  "leanpub"
 ]
