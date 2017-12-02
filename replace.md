@@ -106,7 +106,6 @@ Problems to resolve:
 * [x] arrow-right
 * [x] arrow-up
 * [x] arrows
-* [x] arrows-alt
 * [x] arrows-h
 * [x] arrows-v
 * [x] asterisk (make lighter)
@@ -124,6 +123,21 @@ Problems to resolve:
 
 ## New
 
+* [x] arrows-in
+* [x] arrows-alt
+* [x] arrows-alt-in
+* [x] archery-arrow-down
+* [x] archery-arrow-left
+* [x] archery-arrow-right
+* [x] archery-arrow-up
+* [x] banner-arrow-down
+* [x] banner-arrow-left
+* [x] banner-arrow-right
+* [x] banner-arrow-up
+* [x] banner-arrow-alt-down
+* [x] banner-arrow-alt-left
+* [x] banner-arrow-alt-right
+* [x] banner-arrow-alt-up
 * [x] ribbon-arrow-down
 * [x] ribbon-arrow-left
 * [x] ribbon-arrow-right
