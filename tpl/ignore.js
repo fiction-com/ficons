@@ -54,5 +54,7 @@ module.exports = [
   "maxcdn",
   "meanpath",
   "free-code-camp",
-  "leanpub"
+  "leanpub",
+  "codepie",
+  "fa"
 ]
