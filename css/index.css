@@ -79,12 +79,20 @@ body {
   margin: 1em 0.5em;
   font-size: 1.05em;
   font-weight: 600;
-  letter-spacing: 0.1em;
   min-width: 8em;
   text-align: center;
 }
-#hero p {
+#hero .button.isicon {
+  min-width: 0;
+}
+#hero .actions {
   margin: 1em -0.5em;
+}
+#hero .actions .subitems {
+  text-transform: uppercase;
+  padding-left: 0.5em;
+  font-size: 0.9em;
+  opacity: 0.3;
 }
 #hero .social-buttons {
   list-style-type: none;
