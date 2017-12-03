@@ -3,13 +3,11 @@
   "author": "Fiction",
   "version": "1.1.24",
   "private": false,
-  "keywords": [
-    "Font Awesome",
-    "Webfont"
-  ],
+  "keywords": ["Font Awesome", "Webfont", "Icons", "Font Awesome Replacement"],
   "homepage": "https://ficons.fiction.com",
   "scripts": {
-    "ultra": "git add -A && git commit -m 'via run script' && git push && npm version patch && npm run make && npm publish",
+    "ultra":
+      "git add -A && git commit -m 'via run script' && git push && npm version patch && npm run make && npm publish",
     "make": "node make.js"
   },
   "repository": {
