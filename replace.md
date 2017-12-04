@@ -5,6 +5,13 @@ Problems to resolve:
 * several important icons are ugly
 * order of icons with directions: down, left, right, up
 
+## REQUESTED (DEC 2)
+
+- [ ] American Flag
+- [ ] UK Flag
+- [ ] Meetup.com Icon
+- [ ] JSON icon "{}" -- (curly braces i guess)
+
 ## Complex
 
 * [x] example completed item

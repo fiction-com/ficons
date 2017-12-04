@@ -23,20 +23,20 @@ Doing this makes Ficons a "drop-in" replacement for Font Awesome, which means yo
 
 > **TLDR** You can just replace your Font Awesome CDN link with the one from Ficons and everything should work the same, only better.
 
-### Quick Start
-
-Replace your Font Awesome CDN Link with the Ficons one as follows:
-
-```html
-<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.287/dist/ficons/font.css" />
-```
-
 ### Features:
 
 - Get over 200 new or replaced icons
 - Minimal and more consistent redesign
 - Simple, drop-in replacement for Font Awesome's 'fa-' class system
 - Update your site or apps icons in 60 seconds
+
+### Quick Start
+
+Replace your Font Awesome CDN Link with the Ficons one as follows:
+
+```html
+<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.29/dist/ficons/font.css" />
+```
 
 ## Author
 
