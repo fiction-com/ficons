@@ -15,7 +15,7 @@ const srcFolder = "./src"
 const distFolder = "./dist"
 const outputFolder = `${distFolder}/${fontName}`
 const iconsFolder = `${srcFolder}/${fontName}`
-
+const readmeFile = `./README.md`
 const basicCSSFile = `./tpl/basic.css`
 const jsonFile = `${outputFolder}/font.config.json`
 
@@ -109,6 +109,12 @@ ficonsWebfontsGenerator(
       let find = "{{version}}"
       let regularExpression = new RegExp(find, "g")
       basic = basic.replace(regularExpression, config.version)
+
+      var readme = fs.readFileSync(readmeFile, {
+        encoding: "UTF-8"
+      })
+      readme = readme.replace(/(\d+\.)(\d+\.)(\d)/, config.version)
+      fs.writeFileSync(readmeFile, readme)
 
       // ADD FONT NAME
       find = "{{fontName}}"
