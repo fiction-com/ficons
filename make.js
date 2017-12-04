@@ -113,7 +113,7 @@ ficonsWebfontsGenerator(
       var readme = fs.readFileSync(readmeFile, {
         encoding: "UTF-8"
       })
-      readme = readme.replace(/(\d+\.)(\d+\.)(\d)/, config.version)
+      readme = readme.replace(/(\d+\.)(\d+\.)(\d{0,3})/, config.version)
       fs.writeFileSync(readmeFile, readme)
 
       // ADD FONT NAME
