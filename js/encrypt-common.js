@@ -9,8 +9,9 @@ function decryptAES(pass) {
     content = unescape(content)
     if (content == "") {
       alert("Password was incorrect.")
+      showPasswordForm()
     } else {
-      localStorage.setItem(window.location.href, pass)
+      localStorage.setItem(localStorageSlug(), pass)
       document.getElementById("encrypt-blog").style.display = "inline"
       document.getElementById("encrypt-blog").innerHTML = ""
       // use jquery to load some js code
@@ -48,21 +49,30 @@ function decodeBase64(content) {
   return content
 }
 
+function showPasswordForm() {
+  $("#security").show()
+}
+
+function localStorageSlug() {
+  return window.location.href.split(".html")[0]
+}
+
 // add enter to decrypt
 addLoadEvent(function() {
   if (!document.getElementById("pass")) {
     return
   }
 
-  var savedPassword = localStorage.getItem(window.location.href)
+  var savedPassword = localStorage.getItem(localStorageSlug())
 
   if (savedPassword) {
     console.log("saved password: ", savedPassword)
     decryptAES(savedPassword)
+  } else {
+    showPasswordForm()
   }
 
   document.getElementById("pass").onkeypress = function(keyPressEvent) {
-    console.log(keyPressEvent.keyCode === 13)
     if (keyPressEvent.keyCode === 13) {
       var pass = String(document.getElementById("pass").value)
       decryptAES(pass)
@@ -71,13 +81,14 @@ addLoadEvent(function() {
 })
 
 function addLoadEvent(func) {
-  var oldonload = window.onload
-  if (typeof window.onload != "function") {
-    window.onload = func
-  } else {
-    window.onload = function() {
-      oldonload()
-      func()
-    }
-  }
+  func()
+  // var oldonload = window.onload
+  // if (typeof window.onload != "function") {
+  //   window.onload = func
+  // } else {
+  //   window.onload = function() {
+  //     oldonload()
+  //     func()
+  //   }
+  // }
 }
