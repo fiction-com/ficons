@@ -161,9 +161,6 @@ body {
 #footer .text {
   opacity: 0.5;
 }
-#footer a {
-  color: inherit;
-}
 @media screen and (max-width: 1100px) {
   body {
     -webkit-text-size-adjust: none;

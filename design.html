@@ -272,7 +272,7 @@ function getQueryVariable(variable){
 
     </ul>
     <div class="list">
-     
+      
       
 
       
@@ -295,7 +295,54 @@ function getQueryVariable(variable){
 </ul>
 
       
-     
+
+      <div class="external-links external-links-sidebar" title="https://ficons.fiction.com">
+  <h3 class="ttl">Sites</h3>
+  
+    
+    <a class="external-link" title="Rent furnished housing monthly." href="https://www.fiction.com" >
+      <span class="text">App</span> <span class="short">Main App</span>
+
+   </a>
+    
+
+    
+    <a class="external-link" title="Fiction customer support and FAQ." href="https://help.fiction.com" >
+      <span class="text">Help</span> <span class="short">FAQ & Support</span>
+
+   </a>
+    
+
+    
+    <a class="external-link" title="Articles including updates, rental ideas, travel tips, nomad life." href="https://blog.fiction.com" >
+      <span class="text">Blog</span> <span class="short">Articles & Updates</span>
+
+   </a>
+    
+
+    
+    <a class="external-link" title="Icons by Fiction" href="https://ficons.fiction.com" >
+      <span class="text">Ficons</span> <span class="short">Icons by Fiction</span>
+
+   </a>
+    
+
+    
+    <a class="external-link" title="Fiction job listings, cultural overview and functional guidelines" href="https://about.fiction.com" >
+      <span class="text">About</span> <span class="short">Principles, Specs, Jobs</span>
+
+   </a>
+    
+
+</div>
+
+<script> 
+  $('.external-link').each( function(){
+    if($('.external-links').attr('title').search($(this).attr('href')) !== -1){
+      $(this).addClass('current')
+    }
+  })
+</script>
 
      
     </div>

@@ -1,9 +1,13 @@
 function decryptAES(pass) {
   try {
-    var content = CryptoJS.AES.decrypt(
-      document.getElementById("encrypt-blog").innerHTML.trim(),
-      pass
-    )
+    var theData = document.getElementById("encrypt-blog").innerHTML.trim()
+
+    if (!theData) {
+      alert("No Content.")
+    }
+
+    var content = CryptoJS.AES.decrypt(theData, pass)
+
     content = content.toString(CryptoJS.enc.Utf8)
     content = decodeBase64(content)
     content = unescape(content)
@@ -71,14 +75,14 @@ addLoadEvent(function() {
   } else {
     showPasswordForm()
   }
-
-  document.getElementById("pass").onkeypress = function(keyPressEvent) {
-    if (keyPressEvent.keyCode === 13) {
-      var pass = String(document.getElementById("pass").value)
-      decryptAES(pass)
-    }
-  }
 })
+
+document.getElementById("pass").onkeypress = function(keyPressEvent) {
+  if (keyPressEvent.keyCode === 13) {
+    var pass = String(document.getElementById("pass").value)
+    decryptAES(pass)
+  }
+}
 
 function addLoadEvent(func) {
   func()

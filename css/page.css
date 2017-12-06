@@ -1273,13 +1273,16 @@ ul.demo li {
   content: #3f536d;
 }
 #security {
-  background: #0496ff;
+  background: #fcfcfc;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
   border-radius: 2px;
   font-weight: 600;
+  border-radius: 5px;
 }
 #security label {
   font-size: 2em;
-  color: #fff;
+  color: inherit;
   cursor: text;
 }
 #security .input-container {
@@ -1288,7 +1291,7 @@ ul.demo li {
 #security .input-container input {
   border-bottom: none;
   background: transparent;
-  color: #fff;
+  color: inherit;
   font-size: 2.5em;
   letter-spacing: 3px;
   line-height: 1em;
@@ -1355,7 +1358,7 @@ ul.demo li {
   transition: all 0.3s;
 }
 .input-container input:focus {
-  border-bottom-color: #fff;
+  border-bottom-color: inherit;
 }
 .input-container input:focus ~ div,
 .input-container input:not(:placeholder-shown) ~ div {
@@ -1891,9 +1894,6 @@ body {
 #footer .text {
   opacity: 0.5;
 }
-#footer a {
-  color: inherit;
-}
 @media screen and (max-width: 1100px) {
   body {
     -webkit-text-size-adjust: none;
@@ -2184,6 +2184,44 @@ body {
   content: "\f00c";
   font-family: FontAwesome;
   background-color: #0496ff;
+}
+.external-links {
+  font-size: 0.9em;
+}
+.external-links.external-links-sidebar {
+  padding-top: 1em;
+  margin-top: 3em;
+  border-top: 1px solid #eee;
+}
+.external-links.external-links-sidebar a {
+  display: block;
+}
+.external-links.external-links-index h3 {
+  display: none;
+}
+.external-links.external-links-index a {
+  padding: 5px 1em;
+}
+.external-links.external-links-index .short {
+  display: none;
+}
+.external-links h3 {
+  margin: 0 0 4px 0;
+}
+.external-links a {
+  transition: 0.3s all;
+  opacity: 0.7;
+  padding: 3px 0 3px 0;
+}
+.external-links a .short {
+  opacity: 0.5;
+  margin-left: 5px;
+  display: none;
+}
+.external-links a:hover {
+  transform: translateX(1px);
+  opacity: 1;
+  color: #ff0076;
 }
 .guide-links {
   margin-top: 2em;
