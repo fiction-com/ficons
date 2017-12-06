@@ -70,17 +70,19 @@ addLoadEvent(function() {
   var savedPassword = localStorage.getItem(localStorageSlug())
 
   if (savedPassword) {
-    console.log("saved password: ", savedPassword)
     decryptAES(savedPassword)
   } else {
     showPasswordForm()
   }
 })
 
-document.getElementById("pass").onkeypress = function(keyPressEvent) {
-  if (keyPressEvent.keyCode === 13) {
-    var pass = String(document.getElementById("pass").value)
-    decryptAES(pass)
+var passElement = document.getElementById("pass")
+if (passElement) {
+  passElement.onkeypress = function(keyPressEvent) {
+    if (keyPressEvent.keyCode === 13) {
+      var pass = String(document.getElementById("pass").value)
+      decryptAES(pass)
+    }
   }
 }
 
