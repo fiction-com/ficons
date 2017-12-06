@@ -2188,14 +2188,6 @@ body {
 .external-links {
   font-size: 0.9em;
 }
-.external-links.external-links-sidebar {
-  padding-top: 1em;
-  margin-top: 3em;
-  border-top: 1px solid #eee;
-}
-.external-links.external-links-sidebar a {
-  display: block;
-}
 .external-links.external-links-index h3 {
   display: none;
 }
@@ -2211,7 +2203,7 @@ body {
 .external-links a {
   transition: 0.3s all;
   opacity: 0.7;
-  padding: 3px 0 3px 0;
+  padding: 0 1em;
 }
 .external-links a .short {
   opacity: 0.5;
