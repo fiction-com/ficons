@@ -104,5 +104,9 @@ module.exports = [
   "firefox",
   "vimeo-square",
   "vine",
-  "resistance"
+  "resistance",
+  "dropbox",
+  "dribbble",
+  "pinterest-square",
+  "medium"
 ]

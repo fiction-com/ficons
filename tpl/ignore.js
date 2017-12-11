@@ -56,5 +56,8 @@ module.exports = [
   "free-code-camp",
   "leanpub",
   "codepie",
-  "fa"
+  "fa",
+  "connectdevelop",
+
+  "pied-piper-pp"
 ]
