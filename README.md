@@ -35,7 +35,7 @@ Doing this makes Ficons a "drop-in" replacement for Font Awesome, which means yo
 Replace your Font Awesome CDN Link with the Ficons one as follows:
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/ficons@1.1.30/dist/ficons/font.css"  rel="stylesheet" type="text/css" />
+<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.33/dist/ficons/font.css" />
 ```
 
 ## Author
