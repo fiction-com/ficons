@@ -80,26 +80,14 @@ Ficons is fully open source and is GPL friendly. You can use it...">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 
-    <!-- Always get latest FIcons version (for Fiction sites) -->
-    <link href="https://cdn.jsdelivr.net/npm/ficons/dist/ficons/font.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/ficons@1.1.29/dist/ficons/font.css" rel="stylesheet" type="text/css">
 
     <link href="/custom.css" rel="stylesheet" type="text/css">
 
     <script src="https://use.typekit.net/jip2itv.js"></script>
 <script>
-  try {
-    Typekit.load({
-      async: true
-    })
-  } catch (e) {} //prettier-ignore
-  ! function (e, t, n, a, c, l, m, o, d, f, h, i) {
-    c[l] && (d = e.createElement(t), d[n] = c[l], e[a]("head")[0].appendChild(d), e.documentElement.className +=
-        " wf-cached"),
-      function s() {
-        for (d = e[a](t), f = "", h = 0; h < d.length; h++) i = d[h][n], i.match(m) && (f += i);
-        f && (c[l] = "/**/" + f), setTimeout(s, o += o)
-      }()
-  }(document, "style", "innerHTML", "getElementsByTagName", localStorage, "tk", /^@font|^\.tk-/, 100)
+//prettier-ignore
+try { Typekit.load({ async: true }) } catch (e) {} ! function (e, t, n, a, c, l, m, o, d, f, h, i) { c[l] && (d = e.createElement(t), d[n] = c[l], e[a]("head")[0].appendChild(d), e.documentElement.className +=" wf-cached"),function s() {for (d = e[a](t), f = "", h = 0; h < d.length; h++) i = d[h][n], i.match(m) && (f += i);f && (c[l] = "/**/" + f), setTimeout(s, o += o)}()}(document, "style", "innerHTML", "getElementsByTagName", localStorage, "tk", /^@font|^\.tk-/, 100)
 </script>
 
     <!-- main page styles -->
@@ -166,7 +154,7 @@ Ficons is fully open source and is GPL friendly. You can use it...">
 <li>
   
 
-<form id="search-form">
+<form class="search-form">
   <input type="text" id="search-query-nav" class="search-query search-field-nav st-default-search-input" placeholder="Search">
  
 </form>
@@ -227,7 +215,7 @@ Ficons is fully open source and is GPL friendly. You can use it...">
 <li>
   
 
-<form id="search-form">
+<form class="search-form">
   <input type="text" id="search-query-sidebar" class="search-query search-field-sidebar st-default-search-input" placeholder="Search">
  
 </form>
@@ -307,10 +295,6 @@ Ficons is fully open source and is GPL friendly. You can use it...">
 
 
 <div class="content other with-sidebar ">
-  
-    
-     
-
   
   
     <h1 class="page-title">License</h1>
@@ -409,7 +393,7 @@ Ficons is fully open source and is GPL friendly. You can use it...">
     <div class="search-in">
       
 
-<form id="search-form">
+<form class="search-form">
   <input type="text" id="search-query-search" class="search-query search-field-search st-default-search-input" placeholder="Search">
  
  <a class="close-search"><i class="fa fa-remove"></i></a>
