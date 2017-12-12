@@ -1622,7 +1622,7 @@ ul.demo li {
   border-radius: 2em;
   margin-right: 1em;
   transition: border-color 0.2s ease;
-  background: #f7f7f7 url("../images/search.png") 0.5em 0.25em no-repeat;
+  background: #fff url("../images/search.png") 0.5em 0.25em no-repeat;
   background-size: 2em;
   vertical-align: middle !important;
   transition: opacity 0.3s;
