@@ -13,13 +13,11 @@ Get started at [https://ficons.fiction.com](https://ficons.fiction.com)!
 
 ### Motive
 
-Font Awesome, by Dave Gandy, is a popular icon libary for websites and the web. This is because it was the first open-source project to do an icon font simply and elegantly. 
+We wanted to create a drop-in alternative to Font Awesome 5, that was more minimal and fixed a few icon quirks.
 
-However, over the last 5 years the icons in the set have become a bit dated and over used. Therefore, we saw the opportunity to update the library while maintaining the simple and common-sense method for using Font Awesome icons.
+To do this, we simply maintained the simple **fa-icon-name** class system and left Font Awesome icons as fallbacks if we don't provide a replacement.
 
-To do this, we simply maintained the simple **fa-icon-name** class system and left Font Awesome icons as fallbacks if we don't provide a replacement. 
-
-Doing this makes Ficons a "drop-in" replacement for Font Awesome, which means you can simply replace your CDN link to Font Awesome CSS with the CDN link to Ficons CSS.
+So, Ficons a "drop-in" replacement for Font Awesome, which means you can simply replace your CDN link to Font Awesome CSS with the CDN link to Ficons CSS.
 
 > **TLDR** You can just replace your Font Awesome CDN link with the one from Ficons and everything should work the same, only better.
 
