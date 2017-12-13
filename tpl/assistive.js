@@ -31,5 +31,6 @@ module.exports = [
   "venus-mars",
   "wheelchair",
   "wheelchair-alt",
-  "tty"
+  "tty",
+  "h-square"
 ]

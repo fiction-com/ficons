@@ -108,5 +108,9 @@ module.exports = [
   "dropbox",
   "dribbble",
   "pinterest-square",
-  "medium"
+  "medium",
+  "google",
+  "spotify",
+  "gg-circle",
+  "empire"
 ]
