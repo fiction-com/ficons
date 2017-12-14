@@ -13,11 +13,11 @@ Get started at [https://ficons.fiction.com](https://ficons.fiction.com)!
 
 ### Motive
 
-To create a drop-in alternative to Font Awesome that is less over used and simpler.
+To create a drop-in alternative to Font Awesome for people that like a little variety in their icons.
 
-To do this, Ficons simply maintains the simple **fa-[icon-name]** class system and left Font Awesome icons as fallbacks if we don't provide a replacement.
+Ficons simply maintains the simple **fa-[icon-name]** class system and leaves the original Font Awesome icons as fallbacks if there is no explicit replacement.
 
-So, Ficons a "drop-in" replacement for Font Awesome, which means you can simply replace your CDN link to Font Awesome CSS with the CDN link to Ficons CSS.
+It is a "drop-in" replacement for Font Awesome, which means you can simply replace your Font Awesome CDN link with the Ficons CDN link and you're good to go.
 
 > **TLDR** You can just replace your Font Awesome CDN link with the one from Ficons and everything should work the same, only better.
 
@@ -33,7 +33,7 @@ So, Ficons a "drop-in" replacement for Font Awesome, which means you can simply 
 Replace your Font Awesome CDN Link with the Ficons one as follows:
 
 ```html
-<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.40/dist/ficons/font.css" />
+<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.41/dist/ficons/font.css" />
 ```
 
 ## Author
