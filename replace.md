@@ -15,96 +15,97 @@ Problems to resolve:
 ## Complex
 
 * [x] example completed item
-* [ ] address-book, address-book-o
-* [ ] address-card, address-card-o
-* [ ] archive
-* [ ] automobile
-* [ ] bank
-* [ ] bath / bathtub
-* [ ] bell, bell-o, bell-slash, bell-slash-o
-* [ ] bicycle
-* [ ] biniculars
-* [ ] birthday-cake
-* [ ] bolt
+* [x] address-book, address-book-o
+* [x] address-card, address-card-o
+* [x] archive
+* [x] automobile
+* [x] bank
+* [x] bath / bathtub
+* [x] bell, bell-o, bell-slash, bell-slash-o
+* [x] bicycle
+* [x] biniculars
+* [x] birthday-cake
+* [x] bolt
 * [x] bomb
-* [ ] book
-* [ ] briefcase
-* [ ] bug
-* [ ] building, building-o (simplify)
-* [ ] bullhorn
-* [ ] bus / cab
-* [ ] camera-retro
-* [ ] car
+* [x] book
+* [x] briefcase
+* [x] bug
+* [x] building, building-o (simplify)
+* [x] bullhorn
+* [x] bus
+* [ ] cab
+* [x] camera-retro
+* [x] car
 * [x] circle
-* [ ] coffee
-* [ ] cog / cogs
-* [ ] **comment (all / improve shape)**
-* [ ] cube
-* [ ] cutlery
+* [x] coffee
+* [x] cog / cogs
+* [x] **comment (all / improve shape)**
+* [x] cube
+* [x] cutlery
 * [x] chevron-down
 * [x] chevron-left
 * [x] chevron-right
 * [x] chevron-up
-* [ ] database
-* [ ] edit
-* [ ] envelope (all)
-* [ ] exchange
-* [ ] eye / eye-slash
-* [ ] eyedropper
-* [ ] file (all / improve shape )
-* [ ] filter
-* [ ] fire
-* [ ] flag (all)
-* [ ] flask
-* [ ] folder (all)
+* [x] database
+* [x] edit
+* [x] envelope (all)
+* [x] exchange
+* [x] eye / eye-slash
+* [x] eyedropper
+* [x] file (all / improve shape )
+* [x] filter
+* [x] fire
+* [x] flag (all)
+* [x] flask
+* [x] folder (all)
 * [ ] frown (all smile faces)
-* [ ] gamepad
-* [ ] gavel
-* [ ] **gift**
-* [ ] glass
-* [ ] globe
-* [ ] graduation cap
-* [ ] group
+* [x] gamepad
+* [x] gavel
+* [x] **gift**
+* [x] glass
+* [x] globe
+* [x] graduation cap
+* [x] group
 * [ ] headphones
-* [ ] **home**
-* [ ] **hotel**
-* [ ] hourglass (all)
-* [ ] image
-* [ ] inbox
-* [ ] key
-* [ ] info
-* [ ] id-badge
-* [ ] language (simplify)
-* [ ] laptop
-* [ ] leaf
-* [ ] life-bouy (all)
-* [ ] **lightbulb**
-* [ ] lock
-* [ ] magnet
-* [ ] **map**
-* [ ] **map-marker**
-* [ ] **map-o**
-* [ ] map-pin
-* [ ] map-signs
-* [ ] meh-o
-* [ ] **mobile / mobile-phone**
-* [ ] **paper-plane (all)**
-* [ ] **plug**
-* [ ] print (simplify)
-* [ ] **user**
-* [ ] **quote-left / quote-right**
-* [ ] shopping-bag
-* [ ] shopping-basket
-* [ ] **shower**
-* [ ] **sign-out / sign-in**
-* [ ] **thumbs-up (all)**
-* [ ] ticket
-* [ ] **user (all)**
-* [ ] wrench
-* [ ] volume-control-phone
-* [ ] warning
-* [ ] upload
-* [ ] unlock / lock
+* [x] **home**
+* [x] **hotel**
+* [x] hourglass (all)
+* [x] image
+* [x] inbox
+* [x] key
+* [x] info
+* [x] id-badge
+* [x] language (simplify)
+* [x] laptop
+* [x] leaf
+* [x] life-bouy (all)
+* [x] **lightbulb**
+* [x] lock
+* [x] magnet
+* [x] **map**
+* [x] **map-marker**
+* [x] **map-o**
+* [x] map-pin
+* [x] map-signs
+* [x] meh-o
+* [x] **mobile / mobile-phone**
+* [x] **paper-plane (all)**
+* [x] **plug**
+* [x] print (simplify)
+* [x] **user**
+* [x] **quote-left / quote-right**
+* [x] shopping-bag
+* [x] shopping-basket
+* [x] **shower**
+* [x] **sign-out / sign-in**
+* [x] **thumbs-up (all)**
+* [x] ticket
+* [x] **user (all)**
+* [x] wrench
+* [x] volume-control-phone
+* [x] warning
+* [x] upload
+* [x] unlock / lock
 
 ## Simple
 
@@ -160,6 +161,6 @@ Problems to resolve:
 * [x] swirl-arrow-alt-down
 * [x] swirl-arrow-alt-left
 * [x] swirl-arrow-alt-right
-* [x] swirl-arrow-alt-up
+* [x] swirl-arrow-alt-up 
 * [x] bars-right
 * [x] bars-left
