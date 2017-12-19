@@ -25,8 +25,8 @@ const originalFiles = fs.readdirSync(originalIcons)
 const ficonFiles = fs.readdirSync(iconsFolder)
 
 const iconsListing = {
-  new: [],
   replaced: [],
+  new: [],
   original: [],
   brands: require("./tpl/brands.js").sort(),
   assistive: require("./tpl/assistive.js").sort(),
