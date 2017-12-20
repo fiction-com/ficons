@@ -33,7 +33,7 @@ It is a "drop-in" replacement for Font Awesome, which means you can simply repla
 Replace your Font Awesome CDN Link with the Ficons one as follows:
 
 ```html
-<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.44/dist/ficons/font.css" />
+<link type="text/css" href="https://cdn.jsdelivr.net/npm/ficons@1.1.45/dist/ficons/font.css" />
 ```
 
 ## Author
