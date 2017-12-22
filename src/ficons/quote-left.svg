@@ -2,11 +2,11 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1792px" height="1596px" viewBox="0 96.5 1792 1596" enable-background="new 0 96.5 1792 1596" xml:space="preserve">
+	 width="200px" height="200px" viewBox="796 698 200 200" enable-background="new 796 698 200 200" xml:space="preserve">
 <g>
-	<path d="M800.383,466.889v-362.82c-435.845,0-790.43,354.579-790.43,790.43v790.433h790.43V894.499H372.772
-		C372.772,658.72,564.597,466.889,800.383,466.889z"/>
-	<path d="M1782.047,466.889v-362.82c-435.852,0-790.431,354.579-790.431,790.43v790.433h790.431V894.499h-427.61
-		C1354.437,658.72,1546.267,466.889,1782.047,466.889z"/>
+	<path d="M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+		C836.948,771.39,858.598,749.739,885.208,749.739z"/>
+	<path d="M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+		C947.74,771.39,969.39,749.739,996,749.739z"/>
 </g>
 </svg>
