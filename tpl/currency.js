@@ -36,5 +36,7 @@ module.exports = [
   "google-wallet",
   "paypal",
   "apple-pay",
-  "cc-amazon-pay"
+  "amazon-pay",
+  "cc-amazon-pay",
+  "cc-apple-pay"
 ]
