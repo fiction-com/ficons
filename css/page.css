@@ -1703,10 +1703,11 @@ body.show-search #header .search-query {
 .icon-grid {
   display: flex;
   flex-wrap: wrap;
+  min-width: 60vw;
 }
 .icon-grid .icon-grid-item {
   min-width: 0;
-  flex-basis: 25%;
+  flex-basis: 16%;
   align-items: center;
 }
 .icon-grid .icon-grid-item > .pad {
@@ -1730,6 +1731,16 @@ body.show-search #header .search-query {
 .icon-grid .icon-grid-item:hover {
   color: #ff0076;
   cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .icon-grid .icon-grid-item {
+    flex-basis: 25%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .icon-grid .icon-grid-item {
+    flex-basis: 33%;
+  }
 }
 body {
   background-color: #fff;
