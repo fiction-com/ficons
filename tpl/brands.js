@@ -215,5 +215,7 @@ module.exports = [
   "korvue",
   "laravel",
   "line",
-  "kickstarter"
+  "kickstarter",
+  "hotjar",
+  "hubspot"
 ]
