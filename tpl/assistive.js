@@ -32,5 +32,7 @@ module.exports = [
   "wheelchair",
   "wheelchair-alt",
   "tty",
-  "h-square"
+  "h-square",
+  "accessible-icon",
+  "signing"
 ]

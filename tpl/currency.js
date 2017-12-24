@@ -34,5 +34,7 @@ module.exports = [
   "credit-card",
   "credit-card-alt",
   "google-wallet",
-  "paypal"
+  "paypal",
+  "apple-pay",
+  "cc-amazon-pay"
 ]
