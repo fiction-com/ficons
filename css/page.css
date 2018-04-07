@@ -190,9 +190,6 @@ button {
 .logo-img .thelogoicon {
   fill: #ff0076;
 }
-.logo-img:hover {
-  margin-right: 0.3em;
-}
 .logo-img:hover .thelogoicon {
   fill: #0496ff;
 }
@@ -578,6 +575,7 @@ body.docs #nav {
   max-width: 150px;
 }
 #header-logo .sub-domain {
+  transition: width 0.2s;
   font-size: 14px;
   font-style: italic;
   opacity: 0.7;
@@ -586,7 +584,9 @@ body.docs #nav {
 #header-logo .sub-domain .home {
   opacity: 0;
   transition: all 0.5s;
+  margin-right: 8px;
 }
+#header-logo .logo-link:hover .sub-domain .home,
 #header-logo .sub-domain:hover .home {
   margin-left: 5px;
   opacity: 0.7;
@@ -2077,7 +2077,7 @@ body {
   content: "#";
   color: #ff0076;
   position: absolute;
-  left: -0.7em;
+  left: -1.1em;
   bottom: -2px;
   font-size: 1.2em;
   font-weight: bold;
